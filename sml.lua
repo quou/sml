@@ -46,7 +46,7 @@ config = {
 			typename = "float",
 			dimentions = 2
 		},
-		v2u = {
+		v2d = {
 			typename = "double",
 			dimentions = 2
 		},
