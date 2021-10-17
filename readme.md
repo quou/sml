@@ -16,7 +16,7 @@ order to provide an implementation. Requires a C99-compatible
 compiler.
 
 The resulting header may be customised by changing the `config`
-table at the top of `sml.lua`. Functions may be added by adding`
+table at the top of `sml.lua`. Functions may be added by adding
 to the `function_generator` table, in either the `global` sub-
 table (run once), the `vector` sub-table (run for every vector)
 or the `matrix` sub-table (run for every matrix).
