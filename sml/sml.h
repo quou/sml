@@ -22,34 +22,17 @@ typedef struct {
 	double x;
 	double y;
 	double z;
-	double w;
-} v4d;
-
-double v4d_magnitude(v4d v);
-v4d v4d_sub(v4d a, v4d b);
-v4d v4d_normalised(v4d v);
-v4d v4d_scale(v4d v, double s);
-v4d make_v4d(double x, double y, double z, double w);
-v4d v4d_mul(v4d a, v4d b);
-v4d v4d_div(v4d a, v4d b);
-v4d v4d_add(v4d a, v4d b);
-double v4d_dot(v4d a, v4d b);
-
-typedef struct {
-	double x;
-	double y;
-	double z;
 } v3d;
 
-double v3d_magnitude(v3d v);
-v3d v3d_sub(v3d a, v3d b);
 v3d v3d_normalised(v3d v);
-v3d v3d_scale(v3d v, double s);
 v3d make_v3d(double x, double y, double z);
+v3d v3d_add(v3d a, v3d b);
+v3d v3d_sub(v3d a, v3d b);
 v3d v3d_mul(v3d a, v3d b);
 v3d v3d_div(v3d a, v3d b);
-v3d v3d_add(v3d a, v3d b);
 double v3d_dot(v3d a, v3d b);
+double v3d_magnitude(v3d v);
+v3d v3d_scale(v3d v, double s);
 v3d v3d_cross(v3d a, v3d b);
 
 typedef struct {
@@ -57,30 +40,15 @@ typedef struct {
 	double y;
 } v2d;
 
-double v2d_magnitude(v2d v);
-v2d v2d_sub(v2d a, v2d b);
 v2d v2d_normalised(v2d v);
-v2d v2d_scale(v2d v, double s);
 v2d make_v2d(double x, double y);
+v2d v2d_add(v2d a, v2d b);
+v2d v2d_sub(v2d a, v2d b);
 v2d v2d_mul(v2d a, v2d b);
 v2d v2d_div(v2d a, v2d b);
-v2d v2d_add(v2d a, v2d b);
 double v2d_dot(v2d a, v2d b);
-
-typedef struct {
-	float x;
-	float y;
-} v2f;
-
-float v2f_magnitude(v2f v);
-v2f v2f_sub(v2f a, v2f b);
-v2f v2f_normalised(v2f v);
-v2f v2f_scale(v2f v, float s);
-v2f make_v2f(float x, float y);
-v2f v2f_mul(v2f a, v2f b);
-v2f v2f_div(v2f a, v2f b);
-v2f v2f_add(v2f a, v2f b);
-float v2f_dot(v2f a, v2f b);
+double v2d_magnitude(v2d v);
+v2d v2d_scale(v2d v, double s);
 
 typedef struct {
 	float x;
@@ -88,33 +56,31 @@ typedef struct {
 	float z;
 } v3f;
 
-float v3f_magnitude(v3f v);
-v3f v3f_sub(v3f a, v3f b);
 v3f v3f_normalised(v3f v);
-v3f v3f_scale(v3f v, float s);
 v3f make_v3f(float x, float y, float z);
+v3f v3f_add(v3f a, v3f b);
+v3f v3f_sub(v3f a, v3f b);
 v3f v3f_mul(v3f a, v3f b);
 v3f v3f_div(v3f a, v3f b);
-v3f v3f_add(v3f a, v3f b);
 float v3f_dot(v3f a, v3f b);
+float v3f_magnitude(v3f v);
+v3f v3f_scale(v3f v, float s);
 v3f v3f_cross(v3f a, v3f b);
 
 typedef struct {
 	float x;
 	float y;
-	float z;
-	float w;
-} v4f;
+} v2f;
 
-float v4f_magnitude(v4f v);
-v4f v4f_sub(v4f a, v4f b);
-v4f v4f_normalised(v4f v);
-v4f v4f_scale(v4f v, float s);
-v4f make_v4f(float x, float y, float z, float w);
-v4f v4f_mul(v4f a, v4f b);
-v4f v4f_div(v4f a, v4f b);
-v4f v4f_add(v4f a, v4f b);
-float v4f_dot(v4f a, v4f b);
+v2f v2f_normalised(v2f v);
+v2f make_v2f(float x, float y);
+v2f v2f_add(v2f a, v2f b);
+v2f v2f_sub(v2f a, v2f b);
+v2f v2f_mul(v2f a, v2f b);
+v2f v2f_div(v2f a, v2f b);
+float v2f_dot(v2f a, v2f b);
+float v2f_magnitude(v2f v);
+v2f v2f_scale(v2f v, float s);
 
 typedef struct {
 	u32 x;
@@ -123,15 +89,15 @@ typedef struct {
 	u32 w;
 } v4u;
 
-u32 v4u_magnitude(v4u v);
-v4u v4u_sub(v4u a, v4u b);
 v4u v4u_normalised(v4u v);
-v4u v4u_scale(v4u v, u32 s);
 v4u make_v4u(u32 x, u32 y, u32 z, u32 w);
+v4u v4u_add(v4u a, v4u b);
+v4u v4u_sub(v4u a, v4u b);
 v4u v4u_mul(v4u a, v4u b);
 v4u v4u_div(v4u a, v4u b);
-v4u v4u_add(v4u a, v4u b);
 u32 v4u_dot(v4u a, v4u b);
+u32 v4u_magnitude(v4u v);
+v4u v4u_scale(v4u v, u32 s);
 
 typedef struct {
 	u32 x;
@@ -139,31 +105,65 @@ typedef struct {
 	u32 z;
 } v3u;
 
-u32 v3u_magnitude(v3u v);
-v3u v3u_sub(v3u a, v3u b);
 v3u v3u_normalised(v3u v);
-v3u v3u_scale(v3u v, u32 s);
 v3u make_v3u(u32 x, u32 y, u32 z);
+v3u v3u_add(v3u a, v3u b);
+v3u v3u_sub(v3u a, v3u b);
 v3u v3u_mul(v3u a, v3u b);
 v3u v3u_div(v3u a, v3u b);
-v3u v3u_add(v3u a, v3u b);
 u32 v3u_dot(v3u a, v3u b);
+u32 v3u_magnitude(v3u v);
+v3u v3u_scale(v3u v, u32 s);
 v3u v3u_cross(v3u a, v3u b);
 
 typedef struct {
-	u32 x;
-	u32 y;
-} v2u;
+	double x;
+	double y;
+	double z;
+	double w;
+} v4d;
 
-u32 v2u_magnitude(v2u v);
-v2u v2u_sub(v2u a, v2u b);
-v2u v2u_normalised(v2u v);
-v2u v2u_scale(v2u v, u32 s);
-v2u make_v2u(u32 x, u32 y);
-v2u v2u_mul(v2u a, v2u b);
-v2u v2u_div(v2u a, v2u b);
-v2u v2u_add(v2u a, v2u b);
-u32 v2u_dot(v2u a, v2u b);
+v4d v4d_normalised(v4d v);
+v4d make_v4d(double x, double y, double z, double w);
+v4d v4d_add(v4d a, v4d b);
+v4d v4d_sub(v4d a, v4d b);
+v4d v4d_mul(v4d a, v4d b);
+v4d v4d_div(v4d a, v4d b);
+double v4d_dot(v4d a, v4d b);
+double v4d_magnitude(v4d v);
+v4d v4d_scale(v4d v, double s);
+
+typedef struct {
+	float x;
+	float y;
+	float z;
+	float w;
+} v4f;
+
+v4f v4f_normalised(v4f v);
+v4f make_v4f(float x, float y, float z, float w);
+v4f v4f_add(v4f a, v4f b);
+v4f v4f_sub(v4f a, v4f b);
+v4f v4f_mul(v4f a, v4f b);
+v4f v4f_div(v4f a, v4f b);
+float v4f_dot(v4f a, v4f b);
+float v4f_magnitude(v4f v);
+v4f v4f_scale(v4f v, float s);
+
+typedef struct {
+	i32 x;
+	i32 y;
+} v2i;
+
+v2i v2i_normalised(v2i v);
+v2i make_v2i(i32 x, i32 y);
+v2i v2i_add(v2i a, v2i b);
+v2i v2i_sub(v2i a, v2i b);
+v2i v2i_mul(v2i a, v2i b);
+v2i v2i_div(v2i a, v2i b);
+i32 v2i_dot(v2i a, v2i b);
+i32 v2i_magnitude(v2i v);
+v2i v2i_scale(v2i v, i32 s);
 
 typedef struct {
 	i32 x;
@@ -172,15 +172,15 @@ typedef struct {
 	i32 w;
 } v4i;
 
-i32 v4i_magnitude(v4i v);
-v4i v4i_sub(v4i a, v4i b);
 v4i v4i_normalised(v4i v);
-v4i v4i_scale(v4i v, i32 s);
 v4i make_v4i(i32 x, i32 y, i32 z, i32 w);
+v4i v4i_add(v4i a, v4i b);
+v4i v4i_sub(v4i a, v4i b);
 v4i v4i_mul(v4i a, v4i b);
 v4i v4i_div(v4i a, v4i b);
-v4i v4i_add(v4i a, v4i b);
 i32 v4i_dot(v4i a, v4i b);
+i32 v4i_magnitude(v4i v);
+v4i v4i_scale(v4i v, i32 s);
 
 typedef struct {
 	i32 x;
@@ -188,159 +188,159 @@ typedef struct {
 	i32 z;
 } v3i;
 
-i32 v3i_magnitude(v3i v);
-v3i v3i_sub(v3i a, v3i b);
 v3i v3i_normalised(v3i v);
-v3i v3i_scale(v3i v, i32 s);
 v3i make_v3i(i32 x, i32 y, i32 z);
+v3i v3i_add(v3i a, v3i b);
+v3i v3i_sub(v3i a, v3i b);
 v3i v3i_mul(v3i a, v3i b);
 v3i v3i_div(v3i a, v3i b);
-v3i v3i_add(v3i a, v3i b);
 i32 v3i_dot(v3i a, v3i b);
+i32 v3i_magnitude(v3i v);
+v3i v3i_scale(v3i v, i32 s);
 v3i v3i_cross(v3i a, v3i b);
 
 typedef struct {
-	i32 x;
-	i32 y;
-} v2i;
+	u32 x;
+	u32 y;
+} v2u;
 
-i32 v2i_magnitude(v2i v);
-v2i v2i_sub(v2i a, v2i b);
-v2i v2i_normalised(v2i v);
-v2i v2i_scale(v2i v, i32 s);
-v2i make_v2i(i32 x, i32 y);
-v2i v2i_mul(v2i a, v2i b);
-v2i v2i_div(v2i a, v2i b);
-v2i v2i_add(v2i a, v2i b);
-i32 v2i_dot(v2i a, v2i b);
-
-typedef struct {
-	u32 m[2][2];
-} m2u;
-
-m2u make_m2u(u32 d);
-m2u m2u_identity();
-m2u m2u_mul(m2u a, m2u b);
+v2u v2u_normalised(v2u v);
+v2u make_v2u(u32 x, u32 y);
+v2u v2u_add(v2u a, v2u b);
+v2u v2u_sub(v2u a, v2u b);
+v2u v2u_mul(v2u a, v2u b);
+v2u v2u_div(v2u a, v2u b);
+u32 v2u_dot(v2u a, v2u b);
+u32 v2u_magnitude(v2u v);
+v2u v2u_scale(v2u v, u32 s);
 
 typedef struct {
-	u32 m[3][3];
-} m3u;
+	i32 m[4][4];
+} m4i;
 
-m3u m3u_rotate(m3u m, u32 a, v3u v);
-m3u make_m3u(u32 d);
-m3u m3u_identity();
-m3u m3u_mul(m3u a, m3u b);
-m3u m3u_scale(m3u m, v3u v);
-
-typedef struct {
-	u32 m[4][4];
-} m4u;
-
-m4u m4u_lookat(v3u c, v3u o, v3u u);
-m4u m4u_pers(u32 fov, u32 asp, u32 n, u32 f);
-m4u m4u_orth(u32 l, u32 r, u32 b, u32 t, u32 n, u32 f);
-m4u m4u_rotate(m4u m, u32 a, v3u v);
-m4u make_m4u(u32 d);
-m4u m4u_identity();
-m4u m4u_mul(m4u a, m4u b);
-m4u m4u_translate(m4u m, v3u v);
-m4u m4u_scale(m4u m, v3u v);
-
-typedef struct {
-	i32 m[2][2];
-} m2i;
-
-m2i make_m2i(i32 d);
-m2i m2i_identity();
-m2i m2i_mul(m2i a, m2i b);
+m4i m4i_rotate(m4i m, i32 a, v3i v);
+m4i m4i_mul(m4i a, m4i b);
+m4i m4i_pers(i32 fov, i32 asp, i32 n, i32 f);
+m4i m4i_orth(i32 l, i32 r, i32 b, i32 t, i32 n, i32 f);
+m4i m4i_translate(m4i m, v3i v);
+m4i make_m4i(i32 d);
+m4i m4i_lookat(v3i c, v3i o, v3i u);
+m4i m4i_scale(m4i m, v3i v);
+m4i m4i_identity();
 
 typedef struct {
 	i32 m[3][3];
 } m3i;
 
 m3i m3i_rotate(m3i m, i32 a, v3i v);
-m3i make_m3i(i32 d);
-m3i m3i_identity();
 m3i m3i_mul(m3i a, m3i b);
+m3i make_m3i(i32 d);
 m3i m3i_scale(m3i m, v3i v);
-
-typedef struct {
-	i32 m[4][4];
-} m4i;
-
-m4i m4i_lookat(v3i c, v3i o, v3i u);
-m4i m4i_pers(i32 fov, i32 asp, i32 n, i32 f);
-m4i m4i_orth(i32 l, i32 r, i32 b, i32 t, i32 n, i32 f);
-m4i m4i_rotate(m4i m, i32 a, v3i v);
-m4i make_m4i(i32 d);
-m4i m4i_identity();
-m4i m4i_mul(m4i a, m4i b);
-m4i m4i_translate(m4i m, v3i v);
-m4i m4i_scale(m4i m, v3i v);
+m3i m3i_identity();
 
 typedef struct {
 	double m[4][4];
 } m4d;
 
-m4d m4d_lookat(v3d c, v3d o, v3d u);
+m4d m4d_rotate(m4d m, double a, v3d v);
+m4d m4d_mul(m4d a, m4d b);
 m4d m4d_pers(double fov, double asp, double n, double f);
 m4d m4d_orth(double l, double r, double b, double t, double n, double f);
-m4d m4d_rotate(m4d m, double a, v3d v);
-m4d make_m4d(double d);
-m4d m4d_identity();
-m4d m4d_mul(m4d a, m4d b);
 m4d m4d_translate(m4d m, v3d v);
+m4d make_m4d(double d);
+m4d m4d_lookat(v3d c, v3d o, v3d u);
 m4d m4d_scale(m4d m, v3d v);
+m4d m4d_identity();
+
+typedef struct {
+	i32 m[2][2];
+} m2i;
+
+m2i m2i_mul(m2i a, m2i b);
+m2i make_m2i(i32 d);
+m2i m2i_identity();
 
 typedef struct {
 	double m[2][2];
 } m2d;
 
+m2d m2d_mul(m2d a, m2d b);
 m2d make_m2d(double d);
 m2d m2d_identity();
-m2d m2d_mul(m2d a, m2d b);
 
 typedef struct {
 	double m[3][3];
 } m3d;
 
 m3d m3d_rotate(m3d m, double a, v3d v);
-m3d make_m3d(double d);
-m3d m3d_identity();
 m3d m3d_mul(m3d a, m3d b);
+m3d make_m3d(double d);
 m3d m3d_scale(m3d m, v3d v);
+m3d m3d_identity();
 
 typedef struct {
-	float m[4][4];
-} m4f;
+	float m[2][2];
+} m2f;
 
-m4f m4f_lookat(v3f c, v3f o, v3f u);
-m4f m4f_pers(float fov, float asp, float n, float f);
-m4f m4f_orth(float l, float r, float b, float t, float n, float f);
-m4f m4f_rotate(m4f m, float a, v3f v);
-m4f make_m4f(float d);
-m4f m4f_identity();
-m4f m4f_mul(m4f a, m4f b);
-m4f m4f_translate(m4f m, v3f v);
-m4f m4f_scale(m4f m, v3f v);
+m2f m2f_mul(m2f a, m2f b);
+m2f make_m2f(float d);
+m2f m2f_identity();
 
 typedef struct {
 	float m[3][3];
 } m3f;
 
 m3f m3f_rotate(m3f m, float a, v3f v);
-m3f make_m3f(float d);
-m3f m3f_identity();
 m3f m3f_mul(m3f a, m3f b);
+m3f make_m3f(float d);
 m3f m3f_scale(m3f m, v3f v);
+m3f m3f_identity();
 
 typedef struct {
-	float m[2][2];
-} m2f;
+	u32 m[2][2];
+} m2u;
 
-m2f make_m2f(float d);
-m2f m2f_identity();
-m2f m2f_mul(m2f a, m2f b);
+m2u m2u_mul(m2u a, m2u b);
+m2u make_m2u(u32 d);
+m2u m2u_identity();
+
+typedef struct {
+	float m[4][4];
+} m4f;
+
+m4f m4f_rotate(m4f m, float a, v3f v);
+m4f m4f_mul(m4f a, m4f b);
+m4f m4f_pers(float fov, float asp, float n, float f);
+m4f m4f_orth(float l, float r, float b, float t, float n, float f);
+m4f m4f_translate(m4f m, v3f v);
+m4f make_m4f(float d);
+m4f m4f_lookat(v3f c, v3f o, v3f u);
+m4f m4f_scale(m4f m, v3f v);
+m4f m4f_identity();
+
+typedef struct {
+	u32 m[3][3];
+} m3u;
+
+m3u m3u_rotate(m3u m, u32 a, v3u v);
+m3u m3u_mul(m3u a, m3u b);
+m3u make_m3u(u32 d);
+m3u m3u_scale(m3u m, v3u v);
+m3u m3u_identity();
+
+typedef struct {
+	u32 m[4][4];
+} m4u;
+
+m4u m4u_rotate(m4u m, u32 a, v3u v);
+m4u m4u_mul(m4u a, m4u b);
+m4u m4u_pers(u32 fov, u32 asp, u32 n, u32 f);
+m4u m4u_orth(u32 l, u32 r, u32 b, u32 t, u32 n, u32 f);
+m4u m4u_translate(m4u m, v3u v);
+m4u make_m4u(u32 d);
+m4u m4u_lookat(v3u c, v3u o, v3u u);
+m4u m4u_scale(m4u m, v3u v);
+m4u m4u_identity();
 
 /* Implementation */
 #ifdef SML_IMPL
@@ -355,62 +355,21 @@ double todeg(double rad) {
 	return rad * (180.0 / pi);
 }
 
-double v4d_magnitude(v4d v) {
-	return (double)sqrt(((double)v.x * (double)v.x) + ((double)v.y * (double)v.y) + ((double)v.z * (double)v.z) + ((double)v.w * (double)v.w));
-}
-
-v4d v4d_sub(v4d a, v4d b) {
-	return (v4d) { a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w };
-}
-
-v4d v4d_normalised(v4d v) {
-	const double l = v4d_magnitude(v);
-	return l == (double)0 ? (v4d) { (double)0, (double)0, (double)0, (double)0} : (v4d) { (double)v.x / l, (double)v.y / l, (double)v.z / l, (double)v.w / l};
-}
-
-v4d v4d_scale(v4d v, double s) {
-	return (v4d) { v.x * s, v.y * s, v.z * s, v.w * s };
-}
-
-v4d make_v4d(double x, double y, double z, double w) {
-	return (v4d) { x, y, z, w };
-}
-
-v4d v4d_mul(v4d a, v4d b) {
-	return (v4d) { a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w };
-}
-
-v4d v4d_div(v4d a, v4d b) {
-	return (v4d) { a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w };
-}
-
-v4d v4d_add(v4d a, v4d b) {
-	return (v4d) { a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w };
-}
-
-double v4d_dot(v4d a, v4d b) {
-	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z) + (a.w * b.w));
-}
-
-double v3d_magnitude(v3d v) {
-	return (double)sqrt(((double)v.x * (double)v.x) + ((double)v.y * (double)v.y) + ((double)v.z * (double)v.z));
-}
-
-v3d v3d_sub(v3d a, v3d b) {
-	return (v3d) { a.x - b.x, a.y - b.y, a.z - b.z };
-}
-
 v3d v3d_normalised(v3d v) {
 	const double l = v3d_magnitude(v);
 	return l == (double)0 ? (v3d) { (double)0, (double)0, (double)0} : (v3d) { (double)v.x / l, (double)v.y / l, (double)v.z / l};
 }
 
-v3d v3d_scale(v3d v, double s) {
-	return (v3d) { v.x * s, v.y * s, v.z * s };
-}
-
 v3d make_v3d(double x, double y, double z) {
 	return (v3d) { x, y, z };
+}
+
+v3d v3d_add(v3d a, v3d b) {
+	return (v3d) { a.x + b.x, a.y + b.y, a.z + b.z };
+}
+
+v3d v3d_sub(v3d a, v3d b) {
+	return (v3d) { a.x - b.x, a.y - b.y, a.z - b.z };
 }
 
 v3d v3d_mul(v3d a, v3d b) {
@@ -421,12 +380,16 @@ v3d v3d_div(v3d a, v3d b) {
 	return (v3d) { a.x / b.x, a.y / b.y, a.z / b.z };
 }
 
-v3d v3d_add(v3d a, v3d b) {
-	return (v3d) { a.x + b.x, a.y + b.y, a.z + b.z };
-}
-
 double v3d_dot(v3d a, v3d b) {
 	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z));
+}
+
+double v3d_magnitude(v3d v) {
+	return (double)sqrt(((double)v.x * (double)v.x) + ((double)v.y * (double)v.y) + ((double)v.z * (double)v.z));
+}
+
+v3d v3d_scale(v3d v, double s) {
+	return (v3d) { v.x * s, v.y * s, v.z * s };
 }
 
 v3d v3d_cross(v3d a, v3d b) {
@@ -436,25 +399,21 @@ v3d v3d_cross(v3d a, v3d b) {
 			a.x * b.y - a.y * b.x);
 }
 
-double v2d_magnitude(v2d v) {
-	return (double)sqrt(((double)v.x * (double)v.x) + ((double)v.y * (double)v.y));
-}
-
-v2d v2d_sub(v2d a, v2d b) {
-	return (v2d) { a.x - b.x, a.y - b.y };
-}
-
 v2d v2d_normalised(v2d v) {
 	const double l = v2d_magnitude(v);
 	return l == (double)0 ? (v2d) { (double)0, (double)0} : (v2d) { (double)v.x / l, (double)v.y / l};
 }
 
-v2d v2d_scale(v2d v, double s) {
-	return (v2d) { v.x * s, v.y * s };
-}
-
 v2d make_v2d(double x, double y) {
 	return (v2d) { x, y };
+}
+
+v2d v2d_add(v2d a, v2d b) {
+	return (v2d) { a.x + b.x, a.y + b.y };
+}
+
+v2d v2d_sub(v2d a, v2d b) {
+	return (v2d) { a.x - b.x, a.y - b.y };
 }
 
 v2d v2d_mul(v2d a, v2d b) {
@@ -465,57 +424,16 @@ v2d v2d_div(v2d a, v2d b) {
 	return (v2d) { a.x / b.x, a.y / b.y };
 }
 
-v2d v2d_add(v2d a, v2d b) {
-	return (v2d) { a.x + b.x, a.y + b.y };
-}
-
 double v2d_dot(v2d a, v2d b) {
 	return ((a.x * b.x) + (a.y * b.y));
 }
 
-float v2f_magnitude(v2f v) {
-	return (float)sqrt(((float)v.x * (float)v.x) + ((float)v.y * (float)v.y));
+double v2d_magnitude(v2d v) {
+	return (double)sqrt(((double)v.x * (double)v.x) + ((double)v.y * (double)v.y));
 }
 
-v2f v2f_sub(v2f a, v2f b) {
-	return (v2f) { a.x - b.x, a.y - b.y };
-}
-
-v2f v2f_normalised(v2f v) {
-	const float l = v2f_magnitude(v);
-	return l == (float)0 ? (v2f) { (float)0, (float)0} : (v2f) { (float)v.x / l, (float)v.y / l};
-}
-
-v2f v2f_scale(v2f v, float s) {
-	return (v2f) { v.x * s, v.y * s };
-}
-
-v2f make_v2f(float x, float y) {
-	return (v2f) { x, y };
-}
-
-v2f v2f_mul(v2f a, v2f b) {
-	return (v2f) { a.x * b.x, a.y * b.y };
-}
-
-v2f v2f_div(v2f a, v2f b) {
-	return (v2f) { a.x / b.x, a.y / b.y };
-}
-
-v2f v2f_add(v2f a, v2f b) {
-	return (v2f) { a.x + b.x, a.y + b.y };
-}
-
-float v2f_dot(v2f a, v2f b) {
-	return ((a.x * b.x) + (a.y * b.y));
-}
-
-float v3f_magnitude(v3f v) {
-	return (float)sqrt(((float)v.x * (float)v.x) + ((float)v.y * (float)v.y) + ((float)v.z * (float)v.z));
-}
-
-v3f v3f_sub(v3f a, v3f b) {
-	return (v3f) { a.x - b.x, a.y - b.y, a.z - b.z };
+v2d v2d_scale(v2d v, double s) {
+	return (v2d) { v.x * s, v.y * s };
 }
 
 v3f v3f_normalised(v3f v) {
@@ -523,12 +441,16 @@ v3f v3f_normalised(v3f v) {
 	return l == (float)0 ? (v3f) { (float)0, (float)0, (float)0} : (v3f) { (float)v.x / l, (float)v.y / l, (float)v.z / l};
 }
 
-v3f v3f_scale(v3f v, float s) {
-	return (v3f) { v.x * s, v.y * s, v.z * s };
-}
-
 v3f make_v3f(float x, float y, float z) {
 	return (v3f) { x, y, z };
+}
+
+v3f v3f_add(v3f a, v3f b) {
+	return (v3f) { a.x + b.x, a.y + b.y, a.z + b.z };
+}
+
+v3f v3f_sub(v3f a, v3f b) {
+	return (v3f) { a.x - b.x, a.y - b.y, a.z - b.z };
 }
 
 v3f v3f_mul(v3f a, v3f b) {
@@ -539,12 +461,16 @@ v3f v3f_div(v3f a, v3f b) {
 	return (v3f) { a.x / b.x, a.y / b.y, a.z / b.z };
 }
 
-v3f v3f_add(v3f a, v3f b) {
-	return (v3f) { a.x + b.x, a.y + b.y, a.z + b.z };
-}
-
 float v3f_dot(v3f a, v3f b) {
 	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z));
+}
+
+float v3f_magnitude(v3f v) {
+	return (float)sqrt(((float)v.x * (float)v.x) + ((float)v.y * (float)v.y) + ((float)v.z * (float)v.z));
+}
+
+v3f v3f_scale(v3f v, float s) {
+	return (v3f) { v.x * s, v.y * s, v.z * s };
 }
 
 v3f v3f_cross(v3f a, v3f b) {
@@ -554,49 +480,41 @@ v3f v3f_cross(v3f a, v3f b) {
 			a.x * b.y - a.y * b.x);
 }
 
-float v4f_magnitude(v4f v) {
-	return (float)sqrt(((float)v.x * (float)v.x) + ((float)v.y * (float)v.y) + ((float)v.z * (float)v.z) + ((float)v.w * (float)v.w));
+v2f v2f_normalised(v2f v) {
+	const float l = v2f_magnitude(v);
+	return l == (float)0 ? (v2f) { (float)0, (float)0} : (v2f) { (float)v.x / l, (float)v.y / l};
 }
 
-v4f v4f_sub(v4f a, v4f b) {
-	return (v4f) { a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w };
+v2f make_v2f(float x, float y) {
+	return (v2f) { x, y };
 }
 
-v4f v4f_normalised(v4f v) {
-	const float l = v4f_magnitude(v);
-	return l == (float)0 ? (v4f) { (float)0, (float)0, (float)0, (float)0} : (v4f) { (float)v.x / l, (float)v.y / l, (float)v.z / l, (float)v.w / l};
+v2f v2f_add(v2f a, v2f b) {
+	return (v2f) { a.x + b.x, a.y + b.y };
 }
 
-v4f v4f_scale(v4f v, float s) {
-	return (v4f) { v.x * s, v.y * s, v.z * s, v.w * s };
+v2f v2f_sub(v2f a, v2f b) {
+	return (v2f) { a.x - b.x, a.y - b.y };
 }
 
-v4f make_v4f(float x, float y, float z, float w) {
-	return (v4f) { x, y, z, w };
+v2f v2f_mul(v2f a, v2f b) {
+	return (v2f) { a.x * b.x, a.y * b.y };
 }
 
-v4f v4f_mul(v4f a, v4f b) {
-	return (v4f) { a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w };
+v2f v2f_div(v2f a, v2f b) {
+	return (v2f) { a.x / b.x, a.y / b.y };
 }
 
-v4f v4f_div(v4f a, v4f b) {
-	return (v4f) { a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w };
+float v2f_dot(v2f a, v2f b) {
+	return ((a.x * b.x) + (a.y * b.y));
 }
 
-v4f v4f_add(v4f a, v4f b) {
-	return (v4f) { a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w };
+float v2f_magnitude(v2f v) {
+	return (float)sqrt(((float)v.x * (float)v.x) + ((float)v.y * (float)v.y));
 }
 
-float v4f_dot(v4f a, v4f b) {
-	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z) + (a.w * b.w));
-}
-
-u32 v4u_magnitude(v4u v) {
-	return (u32)sqrt(((u32)v.x * (u32)v.x) + ((u32)v.y * (u32)v.y) + ((u32)v.z * (u32)v.z) + ((u32)v.w * (u32)v.w));
-}
-
-v4u v4u_sub(v4u a, v4u b) {
-	return (v4u) { a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w };
+v2f v2f_scale(v2f v, float s) {
+	return (v2f) { v.x * s, v.y * s };
 }
 
 v4u v4u_normalised(v4u v) {
@@ -604,12 +522,16 @@ v4u v4u_normalised(v4u v) {
 	return l == (u32)0 ? (v4u) { (u32)0, (u32)0, (u32)0, (u32)0} : (v4u) { (u32)v.x / l, (u32)v.y / l, (u32)v.z / l, (u32)v.w / l};
 }
 
-v4u v4u_scale(v4u v, u32 s) {
-	return (v4u) { v.x * s, v.y * s, v.z * s, v.w * s };
-}
-
 v4u make_v4u(u32 x, u32 y, u32 z, u32 w) {
 	return (v4u) { x, y, z, w };
+}
+
+v4u v4u_add(v4u a, v4u b) {
+	return (v4u) { a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w };
+}
+
+v4u v4u_sub(v4u a, v4u b) {
+	return (v4u) { a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w };
 }
 
 v4u v4u_mul(v4u a, v4u b) {
@@ -620,20 +542,16 @@ v4u v4u_div(v4u a, v4u b) {
 	return (v4u) { a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w };
 }
 
-v4u v4u_add(v4u a, v4u b) {
-	return (v4u) { a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w };
-}
-
 u32 v4u_dot(v4u a, v4u b) {
 	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z) + (a.w * b.w));
 }
 
-u32 v3u_magnitude(v3u v) {
-	return (u32)sqrt(((u32)v.x * (u32)v.x) + ((u32)v.y * (u32)v.y) + ((u32)v.z * (u32)v.z));
+u32 v4u_magnitude(v4u v) {
+	return (u32)sqrt(((u32)v.x * (u32)v.x) + ((u32)v.y * (u32)v.y) + ((u32)v.z * (u32)v.z) + ((u32)v.w * (u32)v.w));
 }
 
-v3u v3u_sub(v3u a, v3u b) {
-	return (v3u) { a.x - b.x, a.y - b.y, a.z - b.z };
+v4u v4u_scale(v4u v, u32 s) {
+	return (v4u) { v.x * s, v.y * s, v.z * s, v.w * s };
 }
 
 v3u v3u_normalised(v3u v) {
@@ -641,12 +559,16 @@ v3u v3u_normalised(v3u v) {
 	return l == (u32)0 ? (v3u) { (u32)0, (u32)0, (u32)0} : (v3u) { (u32)v.x / l, (u32)v.y / l, (u32)v.z / l};
 }
 
-v3u v3u_scale(v3u v, u32 s) {
-	return (v3u) { v.x * s, v.y * s, v.z * s };
-}
-
 v3u make_v3u(u32 x, u32 y, u32 z) {
 	return (v3u) { x, y, z };
+}
+
+v3u v3u_add(v3u a, v3u b) {
+	return (v3u) { a.x + b.x, a.y + b.y, a.z + b.z };
+}
+
+v3u v3u_sub(v3u a, v3u b) {
+	return (v3u) { a.x - b.x, a.y - b.y, a.z - b.z };
 }
 
 v3u v3u_mul(v3u a, v3u b) {
@@ -657,12 +579,16 @@ v3u v3u_div(v3u a, v3u b) {
 	return (v3u) { a.x / b.x, a.y / b.y, a.z / b.z };
 }
 
-v3u v3u_add(v3u a, v3u b) {
-	return (v3u) { a.x + b.x, a.y + b.y, a.z + b.z };
-}
-
 u32 v3u_dot(v3u a, v3u b) {
 	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z));
+}
+
+u32 v3u_magnitude(v3u v) {
+	return (u32)sqrt(((u32)v.x * (u32)v.x) + ((u32)v.y * (u32)v.y) + ((u32)v.z * (u32)v.z));
+}
+
+v3u v3u_scale(v3u v, u32 s) {
+	return (v3u) { v.x * s, v.y * s, v.z * s };
 }
 
 v3u v3u_cross(v3u a, v3u b) {
@@ -672,130 +598,78 @@ v3u v3u_cross(v3u a, v3u b) {
 			a.x * b.y - a.y * b.x);
 }
 
-u32 v2u_magnitude(v2u v) {
-	return (u32)sqrt(((u32)v.x * (u32)v.x) + ((u32)v.y * (u32)v.y));
+v4d v4d_normalised(v4d v) {
+	const double l = v4d_magnitude(v);
+	return l == (double)0 ? (v4d) { (double)0, (double)0, (double)0, (double)0} : (v4d) { (double)v.x / l, (double)v.y / l, (double)v.z / l, (double)v.w / l};
 }
 
-v2u v2u_sub(v2u a, v2u b) {
-	return (v2u) { a.x - b.x, a.y - b.y };
+v4d make_v4d(double x, double y, double z, double w) {
+	return (v4d) { x, y, z, w };
 }
 
-v2u v2u_normalised(v2u v) {
-	const u32 l = v2u_magnitude(v);
-	return l == (u32)0 ? (v2u) { (u32)0, (u32)0} : (v2u) { (u32)v.x / l, (u32)v.y / l};
+v4d v4d_add(v4d a, v4d b) {
+	return (v4d) { a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w };
 }
 
-v2u v2u_scale(v2u v, u32 s) {
-	return (v2u) { v.x * s, v.y * s };
+v4d v4d_sub(v4d a, v4d b) {
+	return (v4d) { a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w };
 }
 
-v2u make_v2u(u32 x, u32 y) {
-	return (v2u) { x, y };
+v4d v4d_mul(v4d a, v4d b) {
+	return (v4d) { a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w };
 }
 
-v2u v2u_mul(v2u a, v2u b) {
-	return (v2u) { a.x * b.x, a.y * b.y };
+v4d v4d_div(v4d a, v4d b) {
+	return (v4d) { a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w };
 }
 
-v2u v2u_div(v2u a, v2u b) {
-	return (v2u) { a.x / b.x, a.y / b.y };
-}
-
-v2u v2u_add(v2u a, v2u b) {
-	return (v2u) { a.x + b.x, a.y + b.y };
-}
-
-u32 v2u_dot(v2u a, v2u b) {
-	return ((a.x * b.x) + (a.y * b.y));
-}
-
-i32 v4i_magnitude(v4i v) {
-	return (i32)sqrt(((i32)v.x * (i32)v.x) + ((i32)v.y * (i32)v.y) + ((i32)v.z * (i32)v.z) + ((i32)v.w * (i32)v.w));
-}
-
-v4i v4i_sub(v4i a, v4i b) {
-	return (v4i) { a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w };
-}
-
-v4i v4i_normalised(v4i v) {
-	const i32 l = v4i_magnitude(v);
-	return l == (i32)0 ? (v4i) { (i32)0, (i32)0, (i32)0, (i32)0} : (v4i) { (i32)v.x / l, (i32)v.y / l, (i32)v.z / l, (i32)v.w / l};
-}
-
-v4i v4i_scale(v4i v, i32 s) {
-	return (v4i) { v.x * s, v.y * s, v.z * s, v.w * s };
-}
-
-v4i make_v4i(i32 x, i32 y, i32 z, i32 w) {
-	return (v4i) { x, y, z, w };
-}
-
-v4i v4i_mul(v4i a, v4i b) {
-	return (v4i) { a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w };
-}
-
-v4i v4i_div(v4i a, v4i b) {
-	return (v4i) { a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w };
-}
-
-v4i v4i_add(v4i a, v4i b) {
-	return (v4i) { a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w };
-}
-
-i32 v4i_dot(v4i a, v4i b) {
+double v4d_dot(v4d a, v4d b) {
 	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z) + (a.w * b.w));
 }
 
-i32 v3i_magnitude(v3i v) {
-	return (i32)sqrt(((i32)v.x * (i32)v.x) + ((i32)v.y * (i32)v.y) + ((i32)v.z * (i32)v.z));
+double v4d_magnitude(v4d v) {
+	return (double)sqrt(((double)v.x * (double)v.x) + ((double)v.y * (double)v.y) + ((double)v.z * (double)v.z) + ((double)v.w * (double)v.w));
 }
 
-v3i v3i_sub(v3i a, v3i b) {
-	return (v3i) { a.x - b.x, a.y - b.y, a.z - b.z };
+v4d v4d_scale(v4d v, double s) {
+	return (v4d) { v.x * s, v.y * s, v.z * s, v.w * s };
 }
 
-v3i v3i_normalised(v3i v) {
-	const i32 l = v3i_magnitude(v);
-	return l == (i32)0 ? (v3i) { (i32)0, (i32)0, (i32)0} : (v3i) { (i32)v.x / l, (i32)v.y / l, (i32)v.z / l};
+v4f v4f_normalised(v4f v) {
+	const float l = v4f_magnitude(v);
+	return l == (float)0 ? (v4f) { (float)0, (float)0, (float)0, (float)0} : (v4f) { (float)v.x / l, (float)v.y / l, (float)v.z / l, (float)v.w / l};
 }
 
-v3i v3i_scale(v3i v, i32 s) {
-	return (v3i) { v.x * s, v.y * s, v.z * s };
+v4f make_v4f(float x, float y, float z, float w) {
+	return (v4f) { x, y, z, w };
 }
 
-v3i make_v3i(i32 x, i32 y, i32 z) {
-	return (v3i) { x, y, z };
+v4f v4f_add(v4f a, v4f b) {
+	return (v4f) { a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w };
 }
 
-v3i v3i_mul(v3i a, v3i b) {
-	return (v3i) { a.x * b.x, a.y * b.y, a.z * b.z };
+v4f v4f_sub(v4f a, v4f b) {
+	return (v4f) { a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w };
 }
 
-v3i v3i_div(v3i a, v3i b) {
-	return (v3i) { a.x / b.x, a.y / b.y, a.z / b.z };
+v4f v4f_mul(v4f a, v4f b) {
+	return (v4f) { a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w };
 }
 
-v3i v3i_add(v3i a, v3i b) {
-	return (v3i) { a.x + b.x, a.y + b.y, a.z + b.z };
+v4f v4f_div(v4f a, v4f b) {
+	return (v4f) { a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w };
 }
 
-i32 v3i_dot(v3i a, v3i b) {
-	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z));
+float v4f_dot(v4f a, v4f b) {
+	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z) + (a.w * b.w));
 }
 
-v3i v3i_cross(v3i a, v3i b) {
-	return make_v3i(
-			a.y * b.z - a.z * b.y,
-			a.z * b.x - a.y * b.z,
-			a.x * b.y - a.y * b.x);
+float v4f_magnitude(v4f v) {
+	return (float)sqrt(((float)v.x * (float)v.x) + ((float)v.y * (float)v.y) + ((float)v.z * (float)v.z) + ((float)v.w * (float)v.w));
 }
 
-i32 v2i_magnitude(v2i v) {
-	return (i32)sqrt(((i32)v.x * (i32)v.x) + ((i32)v.y * (i32)v.y));
-}
-
-v2i v2i_sub(v2i a, v2i b) {
-	return (v2i) { a.x - b.x, a.y - b.y };
+v4f v4f_scale(v4f v, float s) {
+	return (v4f) { v.x * s, v.y * s, v.z * s, v.w * s };
 }
 
 v2i v2i_normalised(v2i v) {
@@ -803,12 +677,16 @@ v2i v2i_normalised(v2i v) {
 	return l == (i32)0 ? (v2i) { (i32)0, (i32)0} : (v2i) { (i32)v.x / l, (i32)v.y / l};
 }
 
-v2i v2i_scale(v2i v, i32 s) {
-	return (v2i) { v.x * s, v.y * s };
-}
-
 v2i make_v2i(i32 x, i32 y) {
 	return (v2i) { x, y };
+}
+
+v2i v2i_add(v2i a, v2i b) {
+	return (v2i) { a.x + b.x, a.y + b.y };
+}
+
+v2i v2i_sub(v2i a, v2i b) {
+	return (v2i) { a.x - b.x, a.y - b.y };
 }
 
 v2i v2i_mul(v2i a, v2i b) {
@@ -819,287 +697,138 @@ v2i v2i_div(v2i a, v2i b) {
 	return (v2i) { a.x / b.x, a.y / b.y };
 }
 
-v2i v2i_add(v2i a, v2i b) {
-	return (v2i) { a.x + b.x, a.y + b.y };
-}
-
 i32 v2i_dot(v2i a, v2i b) {
 	return ((a.x * b.x) + (a.y * b.y));
 }
 
-m2u make_m2u(u32 d) {
-	m2u r;
-	for (int x = 0; x < 2; x++) {
-		for (int y = 0; y < 2; y++) {
-			r.m[x][y] = (u32)0;
-		}
-	}
-
-	r.m[0][0] = d;
-	r.m[1][1] = d;
-
-	return r;
+i32 v2i_magnitude(v2i v) {
+	return (i32)sqrt(((i32)v.x * (i32)v.x) + ((i32)v.y * (i32)v.y));
 }
 
-m2u m2u_identity() {
-	return make_m2u((u32)1);
+v2i v2i_scale(v2i v, i32 s) {
+	return (v2i) { v.x * s, v.y * s };
 }
 
-m2u m2u_mul(m2u a, m2u b) {
-	m2u r = make_m2u((u32)1);
-
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1];
-
-	return r;
+v4i v4i_normalised(v4i v) {
+	const i32 l = v4i_magnitude(v);
+	return l == (i32)0 ? (v4i) { (i32)0, (i32)0, (i32)0, (i32)0} : (v4i) { (i32)v.x / l, (i32)v.y / l, (i32)v.z / l, (i32)v.w / l};
 }
 
-m3u m3u_rotate(m3u m, u32 a, v3u v) {
-	m3u r = make_m3u((u32)1);
-
-	const u32 c = (u32)cos((double)a);
-	const u32 s = (u32)sin((double)a);
-
-	const u32 omc = (u32)1 - c;
-
-	const u32 x = v.x;
-	const u32 y = v.y;
-	const u32 z = v.z;
-
-	r.m[0][0] = x * x * omc + c;
-	r.m[0][1] = y * x * omc + z * s;
-	r.m[0][2] = x * z * omc - y * s;
-	r.m[1][0] = x * y * omc - z * s;
-	r.m[1][1] = y * y * omc + c;
-	r.m[1][2] = y * z * omc + x * s;
-	r.m[2][0] = x * z * omc + y * s;
-	r.m[2][1] = y * z * omc - x * s;
-	r.m[2][2] = z * z * omc + c;
-
-	return m3u_mul(m, r);
+v4i make_v4i(i32 x, i32 y, i32 z, i32 w) {
+	return (v4i) { x, y, z, w };
 }
 
-m3u make_m3u(u32 d) {
-	m3u r;
-	for (int x = 0; x < 3; x++) {
-		for (int y = 0; y < 3; y++) {
-			r.m[x][y] = (u32)0;
-		}
-	}
-
-	r.m[0][0] = d;
-	r.m[1][1] = d;
-	r.m[2][2] = d;
-
-	return r;
+v4i v4i_add(v4i a, v4i b) {
+	return (v4i) { a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w };
 }
 
-m3u m3u_identity() {
-	return make_m3u((u32)1);
+v4i v4i_sub(v4i a, v4i b) {
+	return (v4i) { a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w };
 }
 
-m3u m3u_mul(m3u a, m3u b) {
-	m3u r = make_m3u((u32)1);
-
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2];
-	r.m[0][2] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2];
-	r.m[1][2] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2];
-	r.m[2][0] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2];
-	r.m[2][1] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2];
-	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2];
-
-	return r;
+v4i v4i_mul(v4i a, v4i b) {
+	return (v4i) { a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w };
 }
 
-m3u m3u_scale(m3u m, v3u v) {
-	m3u r = make_m3u((u32)1);
-
-	r.m[0][0] = v.x;
-	r.m[1][1] = v.y;
-	r.m[2][2] = v.z;
-
-	return m3u_mul(m, r);
+v4i v4i_div(v4i a, v4i b) {
+	return (v4i) { a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w };
 }
 
-m4u m4u_lookat(v3u c, v3u o, v3u u) {
-	m4u r = make_m4u((u32)1);
-
-	const v3u f = v3u_normalised(v3u_sub(o, c));
-	u = v3u_normalised(u);
-	const v3u s = v3u_normalised(v3u_cross(f, u));
-	u = v3u_cross(s, f);
-
-	r.m[0][0] = s.x;
-	r.m[1][0] = s.y;
-	r.m[2][0] = s.z;
-	r.m[0][1] = u.x;
-	r.m[1][1] = u.y;
-	r.m[2][1] = u.z;
-	r.m[0][2] = -f.x;
-	r.m[1][2] = -f.y;
-	r.m[2][2] = -f.z;
-	r.m[3][0] = -v3u_dot(s, c);
-	r.m[3][1] = -v3u_dot(u, c);
-	r.m[3][2] = v3u_dot(f, c);
-
-	return r;
+i32 v4i_dot(v4i a, v4i b) {
+	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z) + (a.w * b.w));
 }
 
-m4u m4u_pers(u32 fov, u32 asp, u32 n, u32 f) {
-	m4u r = make_m4u((u32)1);
-
-	const u32 q = (u32)1 / (u32)tan(torad((double)fov) / 2.0);
-	const u32 a = q / asp;
-	const u32 b = (n + f) / (n - f);
-	const u32 c = ((u32)2 * n * f) / (n - f);
-
-	r.m[0][0] = a;
-	r.m[1][1] = q;
-	r.m[2][2] = b;
-	r.m[2][3] = (u32)-1;
-	r.m[3][2] = c;
-
-	return r;
+i32 v4i_magnitude(v4i v) {
+	return (i32)sqrt(((i32)v.x * (i32)v.x) + ((i32)v.y * (i32)v.y) + ((i32)v.z * (i32)v.z) + ((i32)v.w * (i32)v.w));
 }
 
-m4u m4u_orth(u32 l, u32 r, u32 b, u32 t, u32 n, u32 f) {
-	m4u res = make_m4u((u32)1);
-
-	res.m[0][0] = (u32)2 / (r - l);
-	res.m[1][1] = (u32)2 / (t - b);
-	res.m[2][2] = (u32)2 / (n - f);
-
-	res.m[3][0] = (l + r) / (l - r);
-	res.m[3][1] = (b + t) / (b - t);
-	res.m[3][2] = (f + n) / (f - n);
-
-	return res;
+v4i v4i_scale(v4i v, i32 s) {
+	return (v4i) { v.x * s, v.y * s, v.z * s, v.w * s };
 }
 
-m4u m4u_rotate(m4u m, u32 a, v3u v) {
-	m4u r = make_m4u((u32)1);
-
-	const u32 c = (u32)cos((double)a);
-	const u32 s = (u32)sin((double)a);
-
-	const u32 omc = (u32)1 - c;
-
-	const u32 x = v.x;
-	const u32 y = v.y;
-	const u32 z = v.z;
-
-	r.m[0][0] = x * x * omc + c;
-	r.m[0][1] = y * x * omc + z * s;
-	r.m[0][2] = x * z * omc - y * s;
-	r.m[1][0] = x * y * omc - z * s;
-	r.m[1][1] = y * y * omc + c;
-	r.m[1][2] = y * z * omc + x * s;
-	r.m[2][0] = x * z * omc + y * s;
-	r.m[2][1] = y * z * omc - x * s;
-	r.m[2][2] = z * z * omc + c;
-
-	return m4u_mul(m, r);
+v3i v3i_normalised(v3i v) {
+	const i32 l = v3i_magnitude(v);
+	return l == (i32)0 ? (v3i) { (i32)0, (i32)0, (i32)0} : (v3i) { (i32)v.x / l, (i32)v.y / l, (i32)v.z / l};
 }
 
-m4u make_m4u(u32 d) {
-	m4u r;
-	for (int x = 0; x < 4; x++) {
-		for (int y = 0; y < 4; y++) {
-			r.m[x][y] = (u32)0;
-		}
-	}
-
-	r.m[0][0] = d;
-	r.m[1][1] = d;
-	r.m[2][2] = d;
-	r.m[3][3] = d;
-
-	return r;
+v3i make_v3i(i32 x, i32 y, i32 z) {
+	return (v3i) { x, y, z };
 }
 
-m4u m4u_identity() {
-	return make_m4u((u32)1);
+v3i v3i_add(v3i a, v3i b) {
+	return (v3i) { a.x + b.x, a.y + b.y, a.z + b.z };
 }
 
-m4u m4u_mul(m4u a, m4u b) {
-	m4u r = make_m4u((u32)1);
-
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2] + a.m[3][0] * b.m[0][3];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2] + a.m[3][0] * b.m[1][3];
-	r.m[0][2] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2] + a.m[3][0] * b.m[2][3];
-	r.m[0][3] = a.m[0][0] * b.m[3][0] + a.m[1][0] * b.m[3][1] + a.m[2][0] * b.m[3][2] + a.m[3][0] * b.m[3][3];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2] + a.m[3][1] * b.m[0][3];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2] + a.m[3][1] * b.m[1][3];
-	r.m[1][2] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2] + a.m[3][1] * b.m[2][3];
-	r.m[1][3] = a.m[0][1] * b.m[3][0] + a.m[1][1] * b.m[3][1] + a.m[2][1] * b.m[3][2] + a.m[3][1] * b.m[3][3];
-	r.m[2][0] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2] + a.m[3][2] * b.m[0][3];
-	r.m[2][1] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2] + a.m[3][2] * b.m[1][3];
-	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2] + a.m[3][2] * b.m[2][3];
-	r.m[2][3] = a.m[0][2] * b.m[3][0] + a.m[1][2] * b.m[3][1] + a.m[2][2] * b.m[3][2] + a.m[3][2] * b.m[3][3];
-	r.m[3][0] = a.m[0][3] * b.m[0][0] + a.m[1][3] * b.m[0][1] + a.m[2][3] * b.m[0][2] + a.m[3][3] * b.m[0][3];
-	r.m[3][1] = a.m[0][3] * b.m[1][0] + a.m[1][3] * b.m[1][1] + a.m[2][3] * b.m[1][2] + a.m[3][3] * b.m[1][3];
-	r.m[3][2] = a.m[0][3] * b.m[2][0] + a.m[1][3] * b.m[2][1] + a.m[2][3] * b.m[2][2] + a.m[3][3] * b.m[2][3];
-	r.m[3][3] = a.m[0][3] * b.m[3][0] + a.m[1][3] * b.m[3][1] + a.m[2][3] * b.m[3][2] + a.m[3][3] * b.m[3][3];
-
-	return r;
+v3i v3i_sub(v3i a, v3i b) {
+	return (v3i) { a.x - b.x, a.y - b.y, a.z - b.z };
 }
 
-m4u m4u_translate(m4u m, v3u v) {
-	m4u r = make_m4u((u32)1);
-
-	r.m[3][0] = v.x;
-	r.m[3][1] = v.y;
-	r.m[3][2] = v.z;
-
-	return m4u_mul(m, r);
+v3i v3i_mul(v3i a, v3i b) {
+	return (v3i) { a.x * b.x, a.y * b.y, a.z * b.z };
 }
 
-m4u m4u_scale(m4u m, v3u v) {
-	m4u r = make_m4u((u32)1);
-
-	r.m[0][0] = v.x;
-	r.m[1][1] = v.y;
-	r.m[2][2] = v.z;
-
-	return m4u_mul(m, r);
+v3i v3i_div(v3i a, v3i b) {
+	return (v3i) { a.x / b.x, a.y / b.y, a.z / b.z };
 }
 
-m2i make_m2i(i32 d) {
-	m2i r;
-	for (int x = 0; x < 2; x++) {
-		for (int y = 0; y < 2; y++) {
-			r.m[x][y] = (i32)0;
-		}
-	}
-
-	r.m[0][0] = d;
-	r.m[1][1] = d;
-
-	return r;
+i32 v3i_dot(v3i a, v3i b) {
+	return ((a.x * b.x) + (a.y * b.y) + (a.z * b.z));
 }
 
-m2i m2i_identity() {
-	return make_m2i((i32)1);
+i32 v3i_magnitude(v3i v) {
+	return (i32)sqrt(((i32)v.x * (i32)v.x) + ((i32)v.y * (i32)v.y) + ((i32)v.z * (i32)v.z));
 }
 
-m2i m2i_mul(m2i a, m2i b) {
-	m2i r = make_m2i((i32)1);
-
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1];
-
-	return r;
+v3i v3i_scale(v3i v, i32 s) {
+	return (v3i) { v.x * s, v.y * s, v.z * s };
 }
 
-m3i m3i_rotate(m3i m, i32 a, v3i v) {
-	m3i r = make_m3i((i32)1);
+v3i v3i_cross(v3i a, v3i b) {
+	return make_v3i(
+			a.y * b.z - a.z * b.y,
+			a.z * b.x - a.y * b.z,
+			a.x * b.y - a.y * b.x);
+}
+
+v2u v2u_normalised(v2u v) {
+	const u32 l = v2u_magnitude(v);
+	return l == (u32)0 ? (v2u) { (u32)0, (u32)0} : (v2u) { (u32)v.x / l, (u32)v.y / l};
+}
+
+v2u make_v2u(u32 x, u32 y) {
+	return (v2u) { x, y };
+}
+
+v2u v2u_add(v2u a, v2u b) {
+	return (v2u) { a.x + b.x, a.y + b.y };
+}
+
+v2u v2u_sub(v2u a, v2u b) {
+	return (v2u) { a.x - b.x, a.y - b.y };
+}
+
+v2u v2u_mul(v2u a, v2u b) {
+	return (v2u) { a.x * b.x, a.y * b.y };
+}
+
+v2u v2u_div(v2u a, v2u b) {
+	return (v2u) { a.x / b.x, a.y / b.y };
+}
+
+u32 v2u_dot(v2u a, v2u b) {
+	return ((a.x * b.x) + (a.y * b.y));
+}
+
+u32 v2u_magnitude(v2u v) {
+	return (u32)sqrt(((u32)v.x * (u32)v.x) + ((u32)v.y * (u32)v.y));
+}
+
+v2u v2u_scale(v2u v, u32 s) {
+	return (v2u) { v.x * s, v.y * s };
+}
+
+m4i m4i_rotate(m4i m, i32 a, v3i v) {
+	m4i r = make_m4i((i32)1);
 
 	const i32 c = (i32)cos((double)a);
 	const i32 s = (i32)sin((double)a);
@@ -1120,74 +849,28 @@ m3i m3i_rotate(m3i m, i32 a, v3i v) {
 	r.m[2][1] = y * z * omc - x * s;
 	r.m[2][2] = z * z * omc + c;
 
-	return m3i_mul(m, r);
+	return m4i_mul(m, r);
 }
 
-m3i make_m3i(i32 d) {
-	m3i r;
-	for (int x = 0; x < 3; x++) {
-		for (int y = 0; y < 3; y++) {
-			r.m[x][y] = (i32)0;
-		}
-	}
-
-	r.m[0][0] = d;
-	r.m[1][1] = d;
-	r.m[2][2] = d;
-
-	return r;
-}
-
-m3i m3i_identity() {
-	return make_m3i((i32)1);
-}
-
-m3i m3i_mul(m3i a, m3i b) {
-	m3i r = make_m3i((i32)1);
-
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2];
-	r.m[0][2] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2];
-	r.m[1][2] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2];
-	r.m[2][0] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2];
-	r.m[2][1] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2];
-	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2];
-
-	return r;
-}
-
-m3i m3i_scale(m3i m, v3i v) {
-	m3i r = make_m3i((i32)1);
-
-	r.m[0][0] = v.x;
-	r.m[1][1] = v.y;
-	r.m[2][2] = v.z;
-
-	return m3i_mul(m, r);
-}
-
-m4i m4i_lookat(v3i c, v3i o, v3i u) {
+m4i m4i_mul(m4i a, m4i b) {
 	m4i r = make_m4i((i32)1);
 
-	const v3i f = v3i_normalised(v3i_sub(o, c));
-	u = v3i_normalised(u);
-	const v3i s = v3i_normalised(v3i_cross(f, u));
-	u = v3i_cross(s, f);
-
-	r.m[0][0] = s.x;
-	r.m[1][0] = s.y;
-	r.m[2][0] = s.z;
-	r.m[0][1] = u.x;
-	r.m[1][1] = u.y;
-	r.m[2][1] = u.z;
-	r.m[0][2] = -f.x;
-	r.m[1][2] = -f.y;
-	r.m[2][2] = -f.z;
-	r.m[3][0] = -v3i_dot(s, c);
-	r.m[3][1] = -v3i_dot(u, c);
-	r.m[3][2] = v3i_dot(f, c);
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2] + a.m[3][0] * b.m[0][3];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2] + a.m[3][0] * b.m[1][3];
+	r.m[2][0] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2] + a.m[3][0] * b.m[2][3];
+	r.m[3][0] = a.m[0][0] * b.m[3][0] + a.m[1][0] * b.m[3][1] + a.m[2][0] * b.m[3][2] + a.m[3][0] * b.m[3][3];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2] + a.m[3][1] * b.m[0][3];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2] + a.m[3][1] * b.m[1][3];
+	r.m[2][1] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2] + a.m[3][1] * b.m[2][3];
+	r.m[3][1] = a.m[0][1] * b.m[3][0] + a.m[1][1] * b.m[3][1] + a.m[2][1] * b.m[3][2] + a.m[3][1] * b.m[3][3];
+	r.m[0][2] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2] + a.m[3][2] * b.m[0][3];
+	r.m[1][2] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2] + a.m[3][2] * b.m[1][3];
+	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2] + a.m[3][2] * b.m[2][3];
+	r.m[3][2] = a.m[0][2] * b.m[3][0] + a.m[1][2] * b.m[3][1] + a.m[2][2] * b.m[3][2] + a.m[3][2] * b.m[3][3];
+	r.m[0][3] = a.m[0][3] * b.m[0][0] + a.m[1][3] * b.m[0][1] + a.m[2][3] * b.m[0][2] + a.m[3][3] * b.m[0][3];
+	r.m[1][3] = a.m[0][3] * b.m[1][0] + a.m[1][3] * b.m[1][1] + a.m[2][3] * b.m[1][2] + a.m[3][3] * b.m[1][3];
+	r.m[2][3] = a.m[0][3] * b.m[2][0] + a.m[1][3] * b.m[2][1] + a.m[2][3] * b.m[2][2] + a.m[3][3] * b.m[2][3];
+	r.m[3][3] = a.m[0][3] * b.m[3][0] + a.m[1][3] * b.m[3][1] + a.m[2][3] * b.m[3][2] + a.m[3][3] * b.m[3][3];
 
 	return r;
 }
@@ -1223,27 +906,12 @@ m4i m4i_orth(i32 l, i32 r, i32 b, i32 t, i32 n, i32 f) {
 	return res;
 }
 
-m4i m4i_rotate(m4i m, i32 a, v3i v) {
+m4i m4i_translate(m4i m, v3i v) {
 	m4i r = make_m4i((i32)1);
 
-	const i32 c = (i32)cos((double)a);
-	const i32 s = (i32)sin((double)a);
-
-	const i32 omc = (i32)1 - c;
-
-	const i32 x = v.x;
-	const i32 y = v.y;
-	const i32 z = v.z;
-
-	r.m[0][0] = x * x * omc + c;
-	r.m[0][1] = y * x * omc + z * s;
-	r.m[0][2] = x * z * omc - y * s;
-	r.m[1][0] = x * y * omc - z * s;
-	r.m[1][1] = y * y * omc + c;
-	r.m[1][2] = y * z * omc + x * s;
-	r.m[2][0] = x * z * omc + y * s;
-	r.m[2][1] = y * z * omc - x * s;
-	r.m[2][2] = z * z * omc + c;
+	r.m[3][0] = v.x;
+	r.m[3][1] = v.y;
+	r.m[3][2] = v.z;
 
 	return m4i_mul(m, r);
 }
@@ -1264,41 +932,28 @@ m4i make_m4i(i32 d) {
 	return r;
 }
 
-m4i m4i_identity() {
-	return make_m4i((i32)1);
-}
-
-m4i m4i_mul(m4i a, m4i b) {
+m4i m4i_lookat(v3i c, v3i o, v3i u) {
 	m4i r = make_m4i((i32)1);
 
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2] + a.m[3][0] * b.m[0][3];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2] + a.m[3][0] * b.m[1][3];
-	r.m[0][2] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2] + a.m[3][0] * b.m[2][3];
-	r.m[0][3] = a.m[0][0] * b.m[3][0] + a.m[1][0] * b.m[3][1] + a.m[2][0] * b.m[3][2] + a.m[3][0] * b.m[3][3];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2] + a.m[3][1] * b.m[0][3];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2] + a.m[3][1] * b.m[1][3];
-	r.m[1][2] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2] + a.m[3][1] * b.m[2][3];
-	r.m[1][3] = a.m[0][1] * b.m[3][0] + a.m[1][1] * b.m[3][1] + a.m[2][1] * b.m[3][2] + a.m[3][1] * b.m[3][3];
-	r.m[2][0] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2] + a.m[3][2] * b.m[0][3];
-	r.m[2][1] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2] + a.m[3][2] * b.m[1][3];
-	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2] + a.m[3][2] * b.m[2][3];
-	r.m[2][3] = a.m[0][2] * b.m[3][0] + a.m[1][2] * b.m[3][1] + a.m[2][2] * b.m[3][2] + a.m[3][2] * b.m[3][3];
-	r.m[3][0] = a.m[0][3] * b.m[0][0] + a.m[1][3] * b.m[0][1] + a.m[2][3] * b.m[0][2] + a.m[3][3] * b.m[0][3];
-	r.m[3][1] = a.m[0][3] * b.m[1][0] + a.m[1][3] * b.m[1][1] + a.m[2][3] * b.m[1][2] + a.m[3][3] * b.m[1][3];
-	r.m[3][2] = a.m[0][3] * b.m[2][0] + a.m[1][3] * b.m[2][1] + a.m[2][3] * b.m[2][2] + a.m[3][3] * b.m[2][3];
-	r.m[3][3] = a.m[0][3] * b.m[3][0] + a.m[1][3] * b.m[3][1] + a.m[2][3] * b.m[3][2] + a.m[3][3] * b.m[3][3];
+	const v3i f = v3i_normalised(v3i_sub(o, c));
+	u = v3i_normalised(u);
+	const v3i s = v3i_normalised(v3i_cross(f, u));
+	u = v3i_cross(s, f);
+
+	r.m[0][0] = s.x;
+	r.m[1][0] = s.y;
+	r.m[2][0] = s.z;
+	r.m[0][1] = u.x;
+	r.m[1][1] = u.y;
+	r.m[2][1] = u.z;
+	r.m[0][2] = -f.x;
+	r.m[1][2] = -f.y;
+	r.m[2][2] = -f.z;
+	r.m[3][0] = -v3i_dot(s, c);
+	r.m[3][1] = -v3i_dot(u, c);
+	r.m[3][2] = v3i_dot(f, c);
 
 	return r;
-}
-
-m4i m4i_translate(m4i m, v3i v) {
-	m4i r = make_m4i((i32)1);
-
-	r.m[3][0] = v.x;
-	r.m[3][1] = v.y;
-	r.m[3][2] = v.z;
-
-	return m4i_mul(m, r);
 }
 
 m4i m4i_scale(m4i m, v3i v) {
@@ -1311,26 +966,124 @@ m4i m4i_scale(m4i m, v3i v) {
 	return m4i_mul(m, r);
 }
 
-m4d m4d_lookat(v3d c, v3d o, v3d u) {
+m4i m4i_identity() {
+	return make_m4i((i32)1);
+}
+
+m3i m3i_rotate(m3i m, i32 a, v3i v) {
+	m3i r = make_m3i((i32)1);
+
+	const i32 c = (i32)cos((double)a);
+	const i32 s = (i32)sin((double)a);
+
+	const i32 omc = (i32)1 - c;
+
+	const i32 x = v.x;
+	const i32 y = v.y;
+	const i32 z = v.z;
+
+	r.m[0][0] = x * x * omc + c;
+	r.m[0][1] = y * x * omc + z * s;
+	r.m[0][2] = x * z * omc - y * s;
+	r.m[1][0] = x * y * omc - z * s;
+	r.m[1][1] = y * y * omc + c;
+	r.m[1][2] = y * z * omc + x * s;
+	r.m[2][0] = x * z * omc + y * s;
+	r.m[2][1] = y * z * omc - x * s;
+	r.m[2][2] = z * z * omc + c;
+
+	return m3i_mul(m, r);
+}
+
+m3i m3i_mul(m3i a, m3i b) {
+	m3i r = make_m3i((i32)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2];
+	r.m[2][0] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2];
+	r.m[2][1] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2];
+	r.m[0][2] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2];
+	r.m[1][2] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2];
+	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2];
+
+	return r;
+}
+
+m3i make_m3i(i32 d) {
+	m3i r;
+	for (int x = 0; x < 3; x++) {
+		for (int y = 0; y < 3; y++) {
+			r.m[x][y] = (i32)0;
+		}
+	}
+
+	r.m[0][0] = d;
+	r.m[1][1] = d;
+	r.m[2][2] = d;
+
+	return r;
+}
+
+m3i m3i_scale(m3i m, v3i v) {
+	m3i r = make_m3i((i32)1);
+
+	r.m[0][0] = v.x;
+	r.m[1][1] = v.y;
+	r.m[2][2] = v.z;
+
+	return m3i_mul(m, r);
+}
+
+m3i m3i_identity() {
+	return make_m3i((i32)1);
+}
+
+m4d m4d_rotate(m4d m, double a, v3d v) {
 	m4d r = make_m4d((double)1);
 
-	const v3d f = v3d_normalised(v3d_sub(o, c));
-	u = v3d_normalised(u);
-	const v3d s = v3d_normalised(v3d_cross(f, u));
-	u = v3d_cross(s, f);
+	const double c = (double)cos((double)a);
+	const double s = (double)sin((double)a);
 
-	r.m[0][0] = s.x;
-	r.m[1][0] = s.y;
-	r.m[2][0] = s.z;
-	r.m[0][1] = u.x;
-	r.m[1][1] = u.y;
-	r.m[2][1] = u.z;
-	r.m[0][2] = -f.x;
-	r.m[1][2] = -f.y;
-	r.m[2][2] = -f.z;
-	r.m[3][0] = -v3d_dot(s, c);
-	r.m[3][1] = -v3d_dot(u, c);
-	r.m[3][2] = v3d_dot(f, c);
+	const double omc = (double)1 - c;
+
+	const double x = v.x;
+	const double y = v.y;
+	const double z = v.z;
+
+	r.m[0][0] = x * x * omc + c;
+	r.m[0][1] = y * x * omc + z * s;
+	r.m[0][2] = x * z * omc - y * s;
+	r.m[1][0] = x * y * omc - z * s;
+	r.m[1][1] = y * y * omc + c;
+	r.m[1][2] = y * z * omc + x * s;
+	r.m[2][0] = x * z * omc + y * s;
+	r.m[2][1] = y * z * omc - x * s;
+	r.m[2][2] = z * z * omc + c;
+
+	return m4d_mul(m, r);
+}
+
+m4d m4d_mul(m4d a, m4d b) {
+	m4d r = make_m4d((double)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2] + a.m[3][0] * b.m[0][3];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2] + a.m[3][0] * b.m[1][3];
+	r.m[2][0] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2] + a.m[3][0] * b.m[2][3];
+	r.m[3][0] = a.m[0][0] * b.m[3][0] + a.m[1][0] * b.m[3][1] + a.m[2][0] * b.m[3][2] + a.m[3][0] * b.m[3][3];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2] + a.m[3][1] * b.m[0][3];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2] + a.m[3][1] * b.m[1][3];
+	r.m[2][1] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2] + a.m[3][1] * b.m[2][3];
+	r.m[3][1] = a.m[0][1] * b.m[3][0] + a.m[1][1] * b.m[3][1] + a.m[2][1] * b.m[3][2] + a.m[3][1] * b.m[3][3];
+	r.m[0][2] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2] + a.m[3][2] * b.m[0][3];
+	r.m[1][2] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2] + a.m[3][2] * b.m[1][3];
+	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2] + a.m[3][2] * b.m[2][3];
+	r.m[3][2] = a.m[0][2] * b.m[3][0] + a.m[1][2] * b.m[3][1] + a.m[2][2] * b.m[3][2] + a.m[3][2] * b.m[3][3];
+	r.m[0][3] = a.m[0][3] * b.m[0][0] + a.m[1][3] * b.m[0][1] + a.m[2][3] * b.m[0][2] + a.m[3][3] * b.m[0][3];
+	r.m[1][3] = a.m[0][3] * b.m[1][0] + a.m[1][3] * b.m[1][1] + a.m[2][3] * b.m[1][2] + a.m[3][3] * b.m[1][3];
+	r.m[2][3] = a.m[0][3] * b.m[2][0] + a.m[1][3] * b.m[2][1] + a.m[2][3] * b.m[2][2] + a.m[3][3] * b.m[2][3];
+	r.m[3][3] = a.m[0][3] * b.m[3][0] + a.m[1][3] * b.m[3][1] + a.m[2][3] * b.m[3][2] + a.m[3][3] * b.m[3][3];
 
 	return r;
 }
@@ -1366,27 +1119,12 @@ m4d m4d_orth(double l, double r, double b, double t, double n, double f) {
 	return res;
 }
 
-m4d m4d_rotate(m4d m, double a, v3d v) {
+m4d m4d_translate(m4d m, v3d v) {
 	m4d r = make_m4d((double)1);
 
-	const double c = (double)cos((double)a);
-	const double s = (double)sin((double)a);
-
-	const double omc = (double)1 - c;
-
-	const double x = v.x;
-	const double y = v.y;
-	const double z = v.z;
-
-	r.m[0][0] = x * x * omc + c;
-	r.m[0][1] = y * x * omc + z * s;
-	r.m[0][2] = x * z * omc - y * s;
-	r.m[1][0] = x * y * omc - z * s;
-	r.m[1][1] = y * y * omc + c;
-	r.m[1][2] = y * z * omc + x * s;
-	r.m[2][0] = x * z * omc + y * s;
-	r.m[2][1] = y * z * omc - x * s;
-	r.m[2][2] = z * z * omc + c;
+	r.m[3][0] = v.x;
+	r.m[3][1] = v.y;
+	r.m[3][2] = v.z;
 
 	return m4d_mul(m, r);
 }
@@ -1407,41 +1145,28 @@ m4d make_m4d(double d) {
 	return r;
 }
 
-m4d m4d_identity() {
-	return make_m4d((double)1);
-}
-
-m4d m4d_mul(m4d a, m4d b) {
+m4d m4d_lookat(v3d c, v3d o, v3d u) {
 	m4d r = make_m4d((double)1);
 
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2] + a.m[3][0] * b.m[0][3];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2] + a.m[3][0] * b.m[1][3];
-	r.m[0][2] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2] + a.m[3][0] * b.m[2][3];
-	r.m[0][3] = a.m[0][0] * b.m[3][0] + a.m[1][0] * b.m[3][1] + a.m[2][0] * b.m[3][2] + a.m[3][0] * b.m[3][3];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2] + a.m[3][1] * b.m[0][3];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2] + a.m[3][1] * b.m[1][3];
-	r.m[1][2] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2] + a.m[3][1] * b.m[2][3];
-	r.m[1][3] = a.m[0][1] * b.m[3][0] + a.m[1][1] * b.m[3][1] + a.m[2][1] * b.m[3][2] + a.m[3][1] * b.m[3][3];
-	r.m[2][0] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2] + a.m[3][2] * b.m[0][3];
-	r.m[2][1] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2] + a.m[3][2] * b.m[1][3];
-	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2] + a.m[3][2] * b.m[2][3];
-	r.m[2][3] = a.m[0][2] * b.m[3][0] + a.m[1][2] * b.m[3][1] + a.m[2][2] * b.m[3][2] + a.m[3][2] * b.m[3][3];
-	r.m[3][0] = a.m[0][3] * b.m[0][0] + a.m[1][3] * b.m[0][1] + a.m[2][3] * b.m[0][2] + a.m[3][3] * b.m[0][3];
-	r.m[3][1] = a.m[0][3] * b.m[1][0] + a.m[1][3] * b.m[1][1] + a.m[2][3] * b.m[1][2] + a.m[3][3] * b.m[1][3];
-	r.m[3][2] = a.m[0][3] * b.m[2][0] + a.m[1][3] * b.m[2][1] + a.m[2][3] * b.m[2][2] + a.m[3][3] * b.m[2][3];
-	r.m[3][3] = a.m[0][3] * b.m[3][0] + a.m[1][3] * b.m[3][1] + a.m[2][3] * b.m[3][2] + a.m[3][3] * b.m[3][3];
+	const v3d f = v3d_normalised(v3d_sub(o, c));
+	u = v3d_normalised(u);
+	const v3d s = v3d_normalised(v3d_cross(f, u));
+	u = v3d_cross(s, f);
+
+	r.m[0][0] = s.x;
+	r.m[1][0] = s.y;
+	r.m[2][0] = s.z;
+	r.m[0][1] = u.x;
+	r.m[1][1] = u.y;
+	r.m[2][1] = u.z;
+	r.m[0][2] = -f.x;
+	r.m[1][2] = -f.y;
+	r.m[2][2] = -f.z;
+	r.m[3][0] = -v3d_dot(s, c);
+	r.m[3][1] = -v3d_dot(u, c);
+	r.m[3][2] = v3d_dot(f, c);
 
 	return r;
-}
-
-m4d m4d_translate(m4d m, v3d v) {
-	m4d r = make_m4d((double)1);
-
-	r.m[3][0] = v.x;
-	r.m[3][1] = v.y;
-	r.m[3][2] = v.z;
-
-	return m4d_mul(m, r);
 }
 
 m4d m4d_scale(m4d m, v3d v) {
@@ -1452,6 +1177,50 @@ m4d m4d_scale(m4d m, v3d v) {
 	r.m[2][2] = v.z;
 
 	return m4d_mul(m, r);
+}
+
+m4d m4d_identity() {
+	return make_m4d((double)1);
+}
+
+m2i m2i_mul(m2i a, m2i b) {
+	m2i r = make_m2i((i32)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1];
+
+	return r;
+}
+
+m2i make_m2i(i32 d) {
+	m2i r;
+	for (int x = 0; x < 2; x++) {
+		for (int y = 0; y < 2; y++) {
+			r.m[x][y] = (i32)0;
+		}
+	}
+
+	r.m[0][0] = d;
+	r.m[1][1] = d;
+
+	return r;
+}
+
+m2i m2i_identity() {
+	return make_m2i((i32)1);
+}
+
+m2d m2d_mul(m2d a, m2d b) {
+	m2d r = make_m2d((double)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1];
+
+	return r;
 }
 
 m2d make_m2d(double d) {
@@ -1470,17 +1239,6 @@ m2d make_m2d(double d) {
 
 m2d m2d_identity() {
 	return make_m2d((double)1);
-}
-
-m2d m2d_mul(m2d a, m2d b) {
-	m2d r = make_m2d((double)1);
-
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1];
-
-	return r;
 }
 
 m3d m3d_rotate(m3d m, double a, v3d v) {
@@ -1508,6 +1266,22 @@ m3d m3d_rotate(m3d m, double a, v3d v) {
 	return m3d_mul(m, r);
 }
 
+m3d m3d_mul(m3d a, m3d b) {
+	m3d r = make_m3d((double)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2];
+	r.m[2][0] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2];
+	r.m[2][1] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2];
+	r.m[0][2] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2];
+	r.m[1][2] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2];
+	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2];
+
+	return r;
+}
+
 m3d make_m3d(double d) {
 	m3d r;
 	for (int x = 0; x < 3; x++) {
@@ -1523,26 +1297,6 @@ m3d make_m3d(double d) {
 	return r;
 }
 
-m3d m3d_identity() {
-	return make_m3d((double)1);
-}
-
-m3d m3d_mul(m3d a, m3d b) {
-	m3d r = make_m3d((double)1);
-
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2];
-	r.m[0][2] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2];
-	r.m[1][2] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2];
-	r.m[2][0] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2];
-	r.m[2][1] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2];
-	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2];
-
-	return r;
-}
-
 m3d m3d_scale(m3d m, v3d v) {
 	m3d r = make_m3d((double)1);
 
@@ -1553,26 +1307,182 @@ m3d m3d_scale(m3d m, v3d v) {
 	return m3d_mul(m, r);
 }
 
-m4f m4f_lookat(v3f c, v3f o, v3f u) {
+m3d m3d_identity() {
+	return make_m3d((double)1);
+}
+
+m2f m2f_mul(m2f a, m2f b) {
+	m2f r = make_m2f((float)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1];
+
+	return r;
+}
+
+m2f make_m2f(float d) {
+	m2f r;
+	for (int x = 0; x < 2; x++) {
+		for (int y = 0; y < 2; y++) {
+			r.m[x][y] = (float)0;
+		}
+	}
+
+	r.m[0][0] = d;
+	r.m[1][1] = d;
+
+	return r;
+}
+
+m2f m2f_identity() {
+	return make_m2f((float)1);
+}
+
+m3f m3f_rotate(m3f m, float a, v3f v) {
+	m3f r = make_m3f((float)1);
+
+	const float c = (float)cos((double)a);
+	const float s = (float)sin((double)a);
+
+	const float omc = (float)1 - c;
+
+	const float x = v.x;
+	const float y = v.y;
+	const float z = v.z;
+
+	r.m[0][0] = x * x * omc + c;
+	r.m[0][1] = y * x * omc + z * s;
+	r.m[0][2] = x * z * omc - y * s;
+	r.m[1][0] = x * y * omc - z * s;
+	r.m[1][1] = y * y * omc + c;
+	r.m[1][2] = y * z * omc + x * s;
+	r.m[2][0] = x * z * omc + y * s;
+	r.m[2][1] = y * z * omc - x * s;
+	r.m[2][2] = z * z * omc + c;
+
+	return m3f_mul(m, r);
+}
+
+m3f m3f_mul(m3f a, m3f b) {
+	m3f r = make_m3f((float)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2];
+	r.m[2][0] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2];
+	r.m[2][1] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2];
+	r.m[0][2] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2];
+	r.m[1][2] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2];
+	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2];
+
+	return r;
+}
+
+m3f make_m3f(float d) {
+	m3f r;
+	for (int x = 0; x < 3; x++) {
+		for (int y = 0; y < 3; y++) {
+			r.m[x][y] = (float)0;
+		}
+	}
+
+	r.m[0][0] = d;
+	r.m[1][1] = d;
+	r.m[2][2] = d;
+
+	return r;
+}
+
+m3f m3f_scale(m3f m, v3f v) {
+	m3f r = make_m3f((float)1);
+
+	r.m[0][0] = v.x;
+	r.m[1][1] = v.y;
+	r.m[2][2] = v.z;
+
+	return m3f_mul(m, r);
+}
+
+m3f m3f_identity() {
+	return make_m3f((float)1);
+}
+
+m2u m2u_mul(m2u a, m2u b) {
+	m2u r = make_m2u((u32)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1];
+
+	return r;
+}
+
+m2u make_m2u(u32 d) {
+	m2u r;
+	for (int x = 0; x < 2; x++) {
+		for (int y = 0; y < 2; y++) {
+			r.m[x][y] = (u32)0;
+		}
+	}
+
+	r.m[0][0] = d;
+	r.m[1][1] = d;
+
+	return r;
+}
+
+m2u m2u_identity() {
+	return make_m2u((u32)1);
+}
+
+m4f m4f_rotate(m4f m, float a, v3f v) {
 	m4f r = make_m4f((float)1);
 
-	const v3f f = v3f_normalised(v3f_sub(o, c));
-	u = v3f_normalised(u);
-	const v3f s = v3f_normalised(v3f_cross(f, u));
-	u = v3f_cross(s, f);
+	const float c = (float)cos((double)a);
+	const float s = (float)sin((double)a);
 
-	r.m[0][0] = s.x;
-	r.m[1][0] = s.y;
-	r.m[2][0] = s.z;
-	r.m[0][1] = u.x;
-	r.m[1][1] = u.y;
-	r.m[2][1] = u.z;
-	r.m[0][2] = -f.x;
-	r.m[1][2] = -f.y;
-	r.m[2][2] = -f.z;
-	r.m[3][0] = -v3f_dot(s, c);
-	r.m[3][1] = -v3f_dot(u, c);
-	r.m[3][2] = v3f_dot(f, c);
+	const float omc = (float)1 - c;
+
+	const float x = v.x;
+	const float y = v.y;
+	const float z = v.z;
+
+	r.m[0][0] = x * x * omc + c;
+	r.m[0][1] = y * x * omc + z * s;
+	r.m[0][2] = x * z * omc - y * s;
+	r.m[1][0] = x * y * omc - z * s;
+	r.m[1][1] = y * y * omc + c;
+	r.m[1][2] = y * z * omc + x * s;
+	r.m[2][0] = x * z * omc + y * s;
+	r.m[2][1] = y * z * omc - x * s;
+	r.m[2][2] = z * z * omc + c;
+
+	return m4f_mul(m, r);
+}
+
+m4f m4f_mul(m4f a, m4f b) {
+	m4f r = make_m4f((float)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2] + a.m[3][0] * b.m[0][3];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2] + a.m[3][0] * b.m[1][3];
+	r.m[2][0] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2] + a.m[3][0] * b.m[2][3];
+	r.m[3][0] = a.m[0][0] * b.m[3][0] + a.m[1][0] * b.m[3][1] + a.m[2][0] * b.m[3][2] + a.m[3][0] * b.m[3][3];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2] + a.m[3][1] * b.m[0][3];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2] + a.m[3][1] * b.m[1][3];
+	r.m[2][1] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2] + a.m[3][1] * b.m[2][3];
+	r.m[3][1] = a.m[0][1] * b.m[3][0] + a.m[1][1] * b.m[3][1] + a.m[2][1] * b.m[3][2] + a.m[3][1] * b.m[3][3];
+	r.m[0][2] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2] + a.m[3][2] * b.m[0][3];
+	r.m[1][2] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2] + a.m[3][2] * b.m[1][3];
+	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2] + a.m[3][2] * b.m[2][3];
+	r.m[3][2] = a.m[0][2] * b.m[3][0] + a.m[1][2] * b.m[3][1] + a.m[2][2] * b.m[3][2] + a.m[3][2] * b.m[3][3];
+	r.m[0][3] = a.m[0][3] * b.m[0][0] + a.m[1][3] * b.m[0][1] + a.m[2][3] * b.m[0][2] + a.m[3][3] * b.m[0][3];
+	r.m[1][3] = a.m[0][3] * b.m[1][0] + a.m[1][3] * b.m[1][1] + a.m[2][3] * b.m[1][2] + a.m[3][3] * b.m[1][3];
+	r.m[2][3] = a.m[0][3] * b.m[2][0] + a.m[1][3] * b.m[2][1] + a.m[2][3] * b.m[2][2] + a.m[3][3] * b.m[2][3];
+	r.m[3][3] = a.m[0][3] * b.m[3][0] + a.m[1][3] * b.m[3][1] + a.m[2][3] * b.m[3][2] + a.m[3][3] * b.m[3][3];
 
 	return r;
 }
@@ -1608,27 +1518,12 @@ m4f m4f_orth(float l, float r, float b, float t, float n, float f) {
 	return res;
 }
 
-m4f m4f_rotate(m4f m, float a, v3f v) {
+m4f m4f_translate(m4f m, v3f v) {
 	m4f r = make_m4f((float)1);
 
-	const float c = (float)cos((double)a);
-	const float s = (float)sin((double)a);
-
-	const float omc = (float)1 - c;
-
-	const float x = v.x;
-	const float y = v.y;
-	const float z = v.z;
-
-	r.m[0][0] = x * x * omc + c;
-	r.m[0][1] = y * x * omc + z * s;
-	r.m[0][2] = x * z * omc - y * s;
-	r.m[1][0] = x * y * omc - z * s;
-	r.m[1][1] = y * y * omc + c;
-	r.m[1][2] = y * z * omc + x * s;
-	r.m[2][0] = x * z * omc + y * s;
-	r.m[2][1] = y * z * omc - x * s;
-	r.m[2][2] = z * z * omc + c;
+	r.m[3][0] = v.x;
+	r.m[3][1] = v.y;
+	r.m[3][2] = v.z;
 
 	return m4f_mul(m, r);
 }
@@ -1649,41 +1544,28 @@ m4f make_m4f(float d) {
 	return r;
 }
 
-m4f m4f_identity() {
-	return make_m4f((float)1);
-}
-
-m4f m4f_mul(m4f a, m4f b) {
+m4f m4f_lookat(v3f c, v3f o, v3f u) {
 	m4f r = make_m4f((float)1);
 
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2] + a.m[3][0] * b.m[0][3];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2] + a.m[3][0] * b.m[1][3];
-	r.m[0][2] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2] + a.m[3][0] * b.m[2][3];
-	r.m[0][3] = a.m[0][0] * b.m[3][0] + a.m[1][0] * b.m[3][1] + a.m[2][0] * b.m[3][2] + a.m[3][0] * b.m[3][3];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2] + a.m[3][1] * b.m[0][3];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2] + a.m[3][1] * b.m[1][3];
-	r.m[1][2] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2] + a.m[3][1] * b.m[2][3];
-	r.m[1][3] = a.m[0][1] * b.m[3][0] + a.m[1][1] * b.m[3][1] + a.m[2][1] * b.m[3][2] + a.m[3][1] * b.m[3][3];
-	r.m[2][0] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2] + a.m[3][2] * b.m[0][3];
-	r.m[2][1] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2] + a.m[3][2] * b.m[1][3];
-	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2] + a.m[3][2] * b.m[2][3];
-	r.m[2][3] = a.m[0][2] * b.m[3][0] + a.m[1][2] * b.m[3][1] + a.m[2][2] * b.m[3][2] + a.m[3][2] * b.m[3][3];
-	r.m[3][0] = a.m[0][3] * b.m[0][0] + a.m[1][3] * b.m[0][1] + a.m[2][3] * b.m[0][2] + a.m[3][3] * b.m[0][3];
-	r.m[3][1] = a.m[0][3] * b.m[1][0] + a.m[1][3] * b.m[1][1] + a.m[2][3] * b.m[1][2] + a.m[3][3] * b.m[1][3];
-	r.m[3][2] = a.m[0][3] * b.m[2][0] + a.m[1][3] * b.m[2][1] + a.m[2][3] * b.m[2][2] + a.m[3][3] * b.m[2][3];
-	r.m[3][3] = a.m[0][3] * b.m[3][0] + a.m[1][3] * b.m[3][1] + a.m[2][3] * b.m[3][2] + a.m[3][3] * b.m[3][3];
+	const v3f f = v3f_normalised(v3f_sub(o, c));
+	u = v3f_normalised(u);
+	const v3f s = v3f_normalised(v3f_cross(f, u));
+	u = v3f_cross(s, f);
+
+	r.m[0][0] = s.x;
+	r.m[1][0] = s.y;
+	r.m[2][0] = s.z;
+	r.m[0][1] = u.x;
+	r.m[1][1] = u.y;
+	r.m[2][1] = u.z;
+	r.m[0][2] = -f.x;
+	r.m[1][2] = -f.y;
+	r.m[2][2] = -f.z;
+	r.m[3][0] = -v3f_dot(s, c);
+	r.m[3][1] = -v3f_dot(u, c);
+	r.m[3][2] = v3f_dot(f, c);
 
 	return r;
-}
-
-m4f m4f_translate(m4f m, v3f v) {
-	m4f r = make_m4f((float)1);
-
-	r.m[3][0] = v.x;
-	r.m[3][1] = v.y;
-	r.m[3][2] = v.z;
-
-	return m4f_mul(m, r);
 }
 
 m4f m4f_scale(m4f m, v3f v) {
@@ -1696,17 +1578,21 @@ m4f m4f_scale(m4f m, v3f v) {
 	return m4f_mul(m, r);
 }
 
-m3f m3f_rotate(m3f m, float a, v3f v) {
-	m3f r = make_m3f((float)1);
+m4f m4f_identity() {
+	return make_m4f((float)1);
+}
 
-	const float c = (float)cos((double)a);
-	const float s = (float)sin((double)a);
+m3u m3u_rotate(m3u m, u32 a, v3u v) {
+	m3u r = make_m3u((u32)1);
 
-	const float omc = (float)1 - c;
+	const u32 c = (u32)cos((double)a);
+	const u32 s = (u32)sin((double)a);
 
-	const float x = v.x;
-	const float y = v.y;
-	const float z = v.z;
+	const u32 omc = (u32)1 - c;
+
+	const u32 x = v.x;
+	const u32 y = v.y;
+	const u32 z = v.z;
 
 	r.m[0][0] = x * x * omc + c;
 	r.m[0][1] = y * x * omc + z * s;
@@ -1718,14 +1604,30 @@ m3f m3f_rotate(m3f m, float a, v3f v) {
 	r.m[2][1] = y * z * omc - x * s;
 	r.m[2][2] = z * z * omc + c;
 
-	return m3f_mul(m, r);
+	return m3u_mul(m, r);
 }
 
-m3f make_m3f(float d) {
-	m3f r;
+m3u m3u_mul(m3u a, m3u b) {
+	m3u r = make_m3u((u32)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2];
+	r.m[2][0] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2];
+	r.m[2][1] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2];
+	r.m[0][2] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2];
+	r.m[1][2] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2];
+	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2];
+
+	return r;
+}
+
+m3u make_m3u(u32 d) {
+	m3u r;
 	for (int x = 0; x < 3; x++) {
 		for (int y = 0; y < 3; y++) {
-			r.m[x][y] = (float)0;
+			r.m[x][y] = (u32)0;
 		}
 	}
 
@@ -1736,63 +1638,161 @@ m3f make_m3f(float d) {
 	return r;
 }
 
-m3f m3f_identity() {
-	return make_m3f((float)1);
-}
-
-m3f m3f_mul(m3f a, m3f b) {
-	m3f r = make_m3f((float)1);
-
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2];
-	r.m[0][2] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2];
-	r.m[1][2] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2];
-	r.m[2][0] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2];
-	r.m[2][1] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2];
-	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2];
-
-	return r;
-}
-
-m3f m3f_scale(m3f m, v3f v) {
-	m3f r = make_m3f((float)1);
+m3u m3u_scale(m3u m, v3u v) {
+	m3u r = make_m3u((u32)1);
 
 	r.m[0][0] = v.x;
 	r.m[1][1] = v.y;
 	r.m[2][2] = v.z;
 
-	return m3f_mul(m, r);
+	return m3u_mul(m, r);
 }
 
-m2f make_m2f(float d) {
-	m2f r;
-	for (int x = 0; x < 2; x++) {
-		for (int y = 0; y < 2; y++) {
-			r.m[x][y] = (float)0;
+m3u m3u_identity() {
+	return make_m3u((u32)1);
+}
+
+m4u m4u_rotate(m4u m, u32 a, v3u v) {
+	m4u r = make_m4u((u32)1);
+
+	const u32 c = (u32)cos((double)a);
+	const u32 s = (u32)sin((double)a);
+
+	const u32 omc = (u32)1 - c;
+
+	const u32 x = v.x;
+	const u32 y = v.y;
+	const u32 z = v.z;
+
+	r.m[0][0] = x * x * omc + c;
+	r.m[0][1] = y * x * omc + z * s;
+	r.m[0][2] = x * z * omc - y * s;
+	r.m[1][0] = x * y * omc - z * s;
+	r.m[1][1] = y * y * omc + c;
+	r.m[1][2] = y * z * omc + x * s;
+	r.m[2][0] = x * z * omc + y * s;
+	r.m[2][1] = y * z * omc - x * s;
+	r.m[2][2] = z * z * omc + c;
+
+	return m4u_mul(m, r);
+}
+
+m4u m4u_mul(m4u a, m4u b) {
+	m4u r = make_m4u((u32)1);
+
+	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1] + a.m[2][0] * b.m[0][2] + a.m[3][0] * b.m[0][3];
+	r.m[1][0] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1] + a.m[2][0] * b.m[1][2] + a.m[3][0] * b.m[1][3];
+	r.m[2][0] = a.m[0][0] * b.m[2][0] + a.m[1][0] * b.m[2][1] + a.m[2][0] * b.m[2][2] + a.m[3][0] * b.m[2][3];
+	r.m[3][0] = a.m[0][0] * b.m[3][0] + a.m[1][0] * b.m[3][1] + a.m[2][0] * b.m[3][2] + a.m[3][0] * b.m[3][3];
+	r.m[0][1] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1] + a.m[2][1] * b.m[0][2] + a.m[3][1] * b.m[0][3];
+	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1] + a.m[2][1] * b.m[1][2] + a.m[3][1] * b.m[1][3];
+	r.m[2][1] = a.m[0][1] * b.m[2][0] + a.m[1][1] * b.m[2][1] + a.m[2][1] * b.m[2][2] + a.m[3][1] * b.m[2][3];
+	r.m[3][1] = a.m[0][1] * b.m[3][0] + a.m[1][1] * b.m[3][1] + a.m[2][1] * b.m[3][2] + a.m[3][1] * b.m[3][3];
+	r.m[0][2] = a.m[0][2] * b.m[0][0] + a.m[1][2] * b.m[0][1] + a.m[2][2] * b.m[0][2] + a.m[3][2] * b.m[0][3];
+	r.m[1][2] = a.m[0][2] * b.m[1][0] + a.m[1][2] * b.m[1][1] + a.m[2][2] * b.m[1][2] + a.m[3][2] * b.m[1][3];
+	r.m[2][2] = a.m[0][2] * b.m[2][0] + a.m[1][2] * b.m[2][1] + a.m[2][2] * b.m[2][2] + a.m[3][2] * b.m[2][3];
+	r.m[3][2] = a.m[0][2] * b.m[3][0] + a.m[1][2] * b.m[3][1] + a.m[2][2] * b.m[3][2] + a.m[3][2] * b.m[3][3];
+	r.m[0][3] = a.m[0][3] * b.m[0][0] + a.m[1][3] * b.m[0][1] + a.m[2][3] * b.m[0][2] + a.m[3][3] * b.m[0][3];
+	r.m[1][3] = a.m[0][3] * b.m[1][0] + a.m[1][3] * b.m[1][1] + a.m[2][3] * b.m[1][2] + a.m[3][3] * b.m[1][3];
+	r.m[2][3] = a.m[0][3] * b.m[2][0] + a.m[1][3] * b.m[2][1] + a.m[2][3] * b.m[2][2] + a.m[3][3] * b.m[2][3];
+	r.m[3][3] = a.m[0][3] * b.m[3][0] + a.m[1][3] * b.m[3][1] + a.m[2][3] * b.m[3][2] + a.m[3][3] * b.m[3][3];
+
+	return r;
+}
+
+m4u m4u_pers(u32 fov, u32 asp, u32 n, u32 f) {
+	m4u r = make_m4u((u32)1);
+
+	const u32 q = (u32)1 / (u32)tan(torad((double)fov) / 2.0);
+	const u32 a = q / asp;
+	const u32 b = (n + f) / (n - f);
+	const u32 c = ((u32)2 * n * f) / (n - f);
+
+	r.m[0][0] = a;
+	r.m[1][1] = q;
+	r.m[2][2] = b;
+	r.m[2][3] = (u32)-1;
+	r.m[3][2] = c;
+
+	return r;
+}
+
+m4u m4u_orth(u32 l, u32 r, u32 b, u32 t, u32 n, u32 f) {
+	m4u res = make_m4u((u32)1);
+
+	res.m[0][0] = (u32)2 / (r - l);
+	res.m[1][1] = (u32)2 / (t - b);
+	res.m[2][2] = (u32)2 / (n - f);
+
+	res.m[3][0] = (l + r) / (l - r);
+	res.m[3][1] = (b + t) / (b - t);
+	res.m[3][2] = (f + n) / (f - n);
+
+	return res;
+}
+
+m4u m4u_translate(m4u m, v3u v) {
+	m4u r = make_m4u((u32)1);
+
+	r.m[3][0] = v.x;
+	r.m[3][1] = v.y;
+	r.m[3][2] = v.z;
+
+	return m4u_mul(m, r);
+}
+
+m4u make_m4u(u32 d) {
+	m4u r;
+	for (int x = 0; x < 4; x++) {
+		for (int y = 0; y < 4; y++) {
+			r.m[x][y] = (u32)0;
 		}
 	}
 
 	r.m[0][0] = d;
 	r.m[1][1] = d;
+	r.m[2][2] = d;
+	r.m[3][3] = d;
 
 	return r;
 }
 
-m2f m2f_identity() {
-	return make_m2f((float)1);
-}
+m4u m4u_lookat(v3u c, v3u o, v3u u) {
+	m4u r = make_m4u((u32)1);
 
-m2f m2f_mul(m2f a, m2f b) {
-	m2f r = make_m2f((float)1);
+	const v3u f = v3u_normalised(v3u_sub(o, c));
+	u = v3u_normalised(u);
+	const v3u s = v3u_normalised(v3u_cross(f, u));
+	u = v3u_cross(s, f);
 
-	r.m[0][0] = a.m[0][0] * b.m[0][0] + a.m[1][0] * b.m[0][1];
-	r.m[0][1] = a.m[0][0] * b.m[1][0] + a.m[1][0] * b.m[1][1];
-	r.m[1][0] = a.m[0][1] * b.m[0][0] + a.m[1][1] * b.m[0][1];
-	r.m[1][1] = a.m[0][1] * b.m[1][0] + a.m[1][1] * b.m[1][1];
+	r.m[0][0] = s.x;
+	r.m[1][0] = s.y;
+	r.m[2][0] = s.z;
+	r.m[0][1] = u.x;
+	r.m[1][1] = u.y;
+	r.m[2][1] = u.z;
+	r.m[0][2] = -f.x;
+	r.m[1][2] = -f.y;
+	r.m[2][2] = -f.z;
+	r.m[3][0] = -v3u_dot(s, c);
+	r.m[3][1] = -v3u_dot(u, c);
+	r.m[3][2] = v3u_dot(f, c);
 
 	return r;
+}
+
+m4u m4u_scale(m4u m, v3u v) {
+	m4u r = make_m4u((u32)1);
+
+	r.m[0][0] = v.x;
+	r.m[1][1] = v.y;
+	r.m[2][2] = v.z;
+
+	return m4u_mul(m, r);
+}
+
+m4u m4u_identity() {
+	return make_m4u((u32)1);
 }
 
 #endif /* SML_IMPL */

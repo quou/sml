@@ -477,7 +477,7 @@ return make_%s(
 
 				for row = 1, matrix.size do
 					for col = 1, matrix.size do
-						str = str .. indent .. string.format("r.%s = ", matrix_at(matrix, row - 1, col - 1))
+						str = str .. indent .. string.format("r.%s = ", matrix_at(matrix, col - 1, row - 1))
 
 						for e = 1, matrix.size do
 							str = str .. string.format("a.%s * b.%s", matrix_at(matrix, e - 1, row - 1), matrix_at(matrix, col - 1, e - 1))
