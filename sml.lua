@@ -517,6 +517,52 @@ return make_%s(
 			end
 		},
 
+		matrix_transform = {
+			min_size = 4,
+
+			prototype = function(name, struct_typename, value_typename, matrix)
+				local vector_typename = struct_name(find_vector(4, matrix.typename))
+
+				return string.format("%s %s_transform(%s m, %s v)", vector_typename, name, struct_typename, vector_typename)
+			end,
+
+			impl = function(name, struct_typename, value_typename, matrix)
+				local vector_name = find_vector(4, matrix.typename)
+				local vector_typename = struct_name(vector_name)
+
+				local x = config.vector_dimentions[1]
+				local y = config.vector_dimentions[2]
+				local z = config.vector_dimentions[3]
+				local w = config.vector_dimentions[4]
+				
+				local indent = get_indent()
+
+				local str = string.format("return make_%s(\n", vector_name)
+				str = str .. indent .. indent .. string.format("m.%s * v.%s + m.%s * v.%s + m.%s * v.%s + m.%s + v.%s,\n",
+					matrix_at(matrix, 0, 0), x,
+					matrix_at(matrix, 0, 1), y,
+					matrix_at(matrix, 0, 2), z,
+					matrix_at(matrix, 0, 3), w)
+				str = str .. indent .. indent .. string.format("m.%s * v.%s + m.%s * v.%s + m.%s * v.%s + m.%s + v.%s,\n",
+					matrix_at(matrix, 1, 0), x,
+					matrix_at(matrix, 1, 1), y,
+					matrix_at(matrix, 1, 2), z,
+					matrix_at(matrix, 1, 3), w)
+				str = str .. indent .. indent .. string.format("m.%s * v.%s + m.%s * v.%s + m.%s * v.%s + m.%s + v.%s,\n",
+					matrix_at(matrix, 2, 0), x,
+					matrix_at(matrix, 2, 1), y,
+					matrix_at(matrix, 2, 2), z,
+					matrix_at(matrix, 2, 3), w)
+				str = str .. indent .. indent .. string.format("m.%s * v.%s + m.%s * v.%s + m.%s * v.%s + m.%s + v.%s);",
+					matrix_at(matrix, 3, 0), x,
+					matrix_at(matrix, 3, 1), y,
+					matrix_at(matrix, 3, 2), z,
+					matrix_at(matrix, 3, 3), w)
+
+				return str
+			end
+		},
+
 		matrix_scale = {
 			min_size = 3,
 
@@ -719,7 +765,17 @@ function find_vector(dimentions, typename)
 		end
 	end
 
-	assert(false, string.format("No %d-dimentional vector for `%s' vector defined.", dimentions, typename))
+	assert(false, string.format("No %d-dimentional vector for `%s' defined.", dimentions, typename))
+end
+
+function find_matrix(size, typename)
+	for k, v in pairs(config.matrices) do
+		if v.size == size and v.typename == typename then
+			return k;
+		end
+	end
+
+	assert(false, string.format("No matrix of size `%d' for `%s' defined.", size, typename))
 end
 
 function get_indent()
