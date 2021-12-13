@@ -309,7 +309,7 @@ return make_%s(
 %s%s%sa.%s * b.%s - a.%s * b.%s,
 %s%s%sa.%s * b.%s - a.%s * b.%s);]], name,
 					indent, indent, indent, y, z, z, y,
-					indent, indent, indent, z, x, y, z,
+					indent, indent, indent, z, x, x, z,
 					indent, indent, indent, x, y, y, x)
 			end
 		},
