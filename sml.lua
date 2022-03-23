@@ -107,11 +107,6 @@ config = {
 			size = 2,
 			major = "column"
 		},
-		m2u = {
-			typename = "u32",
-			size = 2,
-			major = "column"
-		},
 		m3f = {
 			typename = "float",
 			size = 3,
@@ -127,11 +122,6 @@ config = {
 			size = 3,
 			major = "column"
 		},
-		m3u = {
-			typename = "u32",
-			size = 3,
-			major = "column"
-		},
 		m4f = {
 			typename = "float",
 			size = 4,
@@ -139,11 +129,6 @@ config = {
 		},
 		m4i = {
 			typename = "i32",
-			size = 4,
-			major = "column"
-		},
-		m4u = {
-			typename = "u32",
 			size = 4,
 			major = "column"
 		},
@@ -540,23 +525,23 @@ return make_%s(
 				local str = string.format("return make_%s(\n", vector_name)
 				str = str .. indent .. indent .. string.format("m.%s * v.%s + m.%s * v.%s + m.%s * v.%s + m.%s + v.%s,\n",
 					matrix_at(matrix, 0, 0), x,
-					matrix_at(matrix, 0, 1), y,
-					matrix_at(matrix, 0, 2), z,
-					matrix_at(matrix, 0, 3), w)
+					matrix_at(matrix, 1, 0), y,
+					matrix_at(matrix, 2, 0), z,
+					matrix_at(matrix, 3, 0), w)
 				str = str .. indent .. indent .. string.format("m.%s * v.%s + m.%s * v.%s + m.%s * v.%s + m.%s + v.%s,\n",
-					matrix_at(matrix, 1, 0), x,
+					matrix_at(matrix, 0, 1), x,
 					matrix_at(matrix, 1, 1), y,
-					matrix_at(matrix, 1, 2), z,
-					matrix_at(matrix, 1, 3), w)
+					matrix_at(matrix, 2, 1), z,
+					matrix_at(matrix, 3, 1), w)
 				str = str .. indent .. indent .. string.format("m.%s * v.%s + m.%s * v.%s + m.%s * v.%s + m.%s + v.%s,\n",
-					matrix_at(matrix, 2, 0), x,
-					matrix_at(matrix, 2, 1), y,
+					matrix_at(matrix, 0, 2), x,
+					matrix_at(matrix, 1, 2), y,
 					matrix_at(matrix, 2, 2), z,
-					matrix_at(matrix, 2, 3), w)
+					matrix_at(matrix, 3, 2), w)
 				str = str .. indent .. indent .. string.format("m.%s * v.%s + m.%s * v.%s + m.%s * v.%s + m.%s + v.%s);",
-					matrix_at(matrix, 3, 0), x,
-					matrix_at(matrix, 3, 1), y,
-					matrix_at(matrix, 3, 2), z,
+					matrix_at(matrix, 0, 3), x,
+					matrix_at(matrix, 1, 3), y,
+					matrix_at(matrix, 2, 3), z,
 					matrix_at(matrix, 3, 3), w)
 
 				return str
